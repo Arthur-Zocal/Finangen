@@ -2,7 +2,7 @@
 
 # Diagrama de Classes e Padrões de Projeto
 
-Este documento apresenta o diagrama de classes da solução proposta para o projeto "FInangen".
+Este documento apresenta o diagrama de classes da solução proposta para o projeto "Finangen".
 
 ## Diagrama de Classes
 
