@@ -13,6 +13,9 @@ import java.util.stream.Collectors;
 @DiscriminatorValue("ADMIN")
 public class Admin extends Pessoa{
 
+    @ManyToOne
+    @JoinColumn(name="admin")
+    private Admin admin;
 
     public Admin(Long id, String nome, String rg, String cpf, String numCelular, String email, String senha, Set<Integer> tipoPessoa) {
         super(id, nome, rg, cpf, numCelular, email, senha, tipoPessoa);
@@ -36,5 +39,13 @@ public class Admin extends Pessoa{
     public Admin(){
         super();
         addTipoPessoa(TipoPessoa.ADMIN);
+    }
+
+    public Admin getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(Admin admin) {
+        this.admin = admin;
     }
 }

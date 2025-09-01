@@ -1,4 +1,60 @@
 package com.finangen.security;
 
-public class UsuarioSS {
+import com.finangen.domains.Pessoa;
+import com.finangen.domains.Usuario;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.stream.Collectors;
+
+public class UsuarioSS implements UserDetails {
+
+    private String username;
+    private String password;
+
+    private Collection<? extends GrantedAuthority> authorities;
+
+    public UsuarioSS(Pessoa usuario){
+        this.username = usuario.getEmail();
+        this.password = usuario.getSenha();
+        this.authorities = usuario.getTipoPessoa().stream()
+                .map(x -> new SimpleGrantedAuthority(x.getTipoPessoa()))
+                .collect(Collectors.toSet());
+    }
+
+    public Collection<? extends GrantedAuthority> getAuthorities(){
+        return authorities;
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
 }

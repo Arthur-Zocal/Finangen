@@ -1,3 +1,5 @@
+
+
 package com.finangen.domains.dtos;
 
 import com.finangen.domains.ContaBancaria;
@@ -34,17 +36,69 @@ public class ContaBancariaDTO {
 
     public ContaBancariaDTO() {}
 
-    // --->>> PRECISA ARRUMAR O ContaBancaria PRIMEIRO  <<<---
-
     public ContaBancariaDTO(ContaBancaria contaBancaria) {
+        this.idConta = contaBancaria.getIdConta();
+        this.descricaoConta = contaBancaria.getDescricaoConta();
+        this.agenciaConta = contaBancaria.getAgenciaConta();
+        this.numeroConta = contaBancaria.getNumeroConta();
+        this.limiteConta = contaBancaria.getLimiteConta();
+        this.saldoConta = contaBancaria.getSaldoConta();
+        this.tipoConta = contaBancaria.getTipoConta().getId();
+    }
+
+    public Long getIdConta() {
+        return idConta;
+    }
+
+    public void setIdConta(Long idConta) {
         this.idConta = idConta;
+    }
+
+    public @NotNull(message = "O campo descricaoConta não pode ser vazio") @NotBlank(message = "O campo descricaoConta não pode ser vazio") String getDescricaoConta() {
+        return descricaoConta;
+    }
+
+    public void setDescricaoConta(@NotNull(message = "O campo descricaoConta não pode ser vazio") @NotBlank(message = "O campo descricaoConta não pode ser vazio") String descricaoConta) {
         this.descricaoConta = descricaoConta;
+    }
+
+    public @NotNull(message = "O campo agenciaConta não pode ser vazio") @NotBlank(message = "O campo agenciaConta não pode ser vazio") String getAgenciaConta() {
+        return agenciaConta;
+    }
+
+    public void setAgenciaConta(@NotNull(message = "O campo agenciaConta não pode ser vazio") @NotBlank(message = "O campo agenciaConta não pode ser vazio") String agenciaConta) {
         this.agenciaConta = agenciaConta;
+    }
+
+    public @NotNull(message = "O campo numeroConta não pode ser vazio") @NotBlank(message = "O campo numeroConta não pode ser vazio") String getNumeroConta() {
+        return numeroConta;
+    }
+
+    public void setNumeroConta(@NotNull(message = "O campo numeroConta não pode ser vazio") @NotBlank(message = "O campo numeroConta não pode ser vazio") String numeroConta) {
         this.numeroConta = numeroConta;
+    }
+
+    public @NotNull(message = "O campo limiteConta não pode ser vazio") @NotBlank(message = "O campo limiteConta não pode ser vazio") String getLimiteConta() {
+        return limiteConta;
+    }
+
+    public void setLimiteConta(@NotNull(message = "O campo limiteConta não pode ser vazio") @NotBlank(message = "O campo limiteConta não pode ser vazio") String limiteConta) {
         this.limiteConta = limiteConta;
+    }
+
+    public @NotNull(message = "O campo saldoConta não pode ser vazio") @Digits(integer = 15, fraction = 3) BigDecimal getSaldoConta() {
+        return saldoConta;
+    }
+
+    public void setSaldoConta(@NotNull(message = "O campo saldoConta não pode ser vazio") @Digits(integer = 15, fraction = 3) BigDecimal saldoConta) {
         this.saldoConta = saldoConta;
+    }
+
+    public int getTipoConta() {
+        return tipoConta;
+    }
+
+    public void setTipoConta(int tipoConta) {
         this.tipoConta = tipoConta;
     }
-    // --->>> PRECISA ARRUMAR O ContaBancaria PRIMEIRO  <<<---
-
 }
