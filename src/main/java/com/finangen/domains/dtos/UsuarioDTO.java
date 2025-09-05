@@ -48,8 +48,7 @@ public class UsuarioDTO {
         this.numCelular = obj.getNumCelular();
         this.email = obj.getEmail();
         this.senha = obj.getSenha();
-        //this.tipoPessoa = obj.getTipoPessoa().stream().map(TipoPessoa::getId).collect(Collectors.toSet());
-        this.tipoPessoa.stream().map(TipoPessoa::toEnum).collect(Collectors.toSet());
+        this.tipoPessoa = obj.getTipoPessoa().stream().map(TipoPessoa::getId).collect(Collectors.toSet());
     }
 
     public Long getId() {

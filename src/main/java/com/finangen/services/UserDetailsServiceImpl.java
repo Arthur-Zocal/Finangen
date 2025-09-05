@@ -17,9 +17,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private final PessoaRepository pessoaRepository;
 
     //public UserDetailsServiceImpl(UsersRepository userRepository) {
-    public UserDetailsServiceImpl(PessoaRepository personRepository) {
+    public UserDetailsServiceImpl(PessoaRepository pessoaRepository) {
         //this.userRepository = userRepository;
-        this.pessoaRepository = personRepository;
+        this.pessoaRepository = pessoaRepository;
     }
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
