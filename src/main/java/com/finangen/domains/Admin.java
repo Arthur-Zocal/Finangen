@@ -17,8 +17,8 @@ public class Admin extends Pessoa{
     @JoinColumn(name="admin")
     private Admin admin;
 
-    public Admin(Long id, String nome, String rg, String cpf, String numCelular, String email, String senha, Set<Integer> tipoPessoa) {
-        super(id, nome, rg, cpf, numCelular, email, senha, tipoPessoa);
+    public Admin(Long id, String nome, String rg, String cpf, String numCelular, String email, String senha) {
+        super(id, nome, rg, cpf, numCelular, email, senha);
         addTipoPessoa(TipoPessoa.ADMIN);
     }
 

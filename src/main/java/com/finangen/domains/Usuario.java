@@ -18,8 +18,8 @@ public class Usuario extends Pessoa{
     @JoinColumn(name="usuario")
     private Usuario usuario;
 
-    public Usuario(Long id, String nome, String rg, String cpf, String numCelular, String email, String senha, Set<Integer> tipoPessoa, Usuario usuario) {
-        super(id, nome, rg, cpf, numCelular, email, senha, tipoPessoa);
+    public Usuario(Long id, String nome, String rg, String cpf, String numCelular, String email, String senha) {
+        super(id, nome, rg, cpf, numCelular, email, senha);
         addTipoPessoa(TipoPessoa.USUARIO);
     }
 
@@ -43,11 +43,11 @@ public class Usuario extends Pessoa{
         addTipoPessoa(TipoPessoa.USUARIO);
     }
 
-    /*public Usuario getUsuario() {
+    public Usuario getUsuario() {
         return usuario;
     }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-    }*/
+    }
 }

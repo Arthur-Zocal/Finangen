@@ -21,20 +21,24 @@ public class ContaBancaria {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_contabancaria")
     private Long idConta;
 
-    @NotNull @NotBlank
+    @NotNull
+    @NotBlank
     private String descricaoConta;
 
-    @NotNull @NotBlank
+    @NotNull
+    @NotBlank
     private String agenciaConta;
 
-    @NotNull @NotBlank
+    @NotNull
+    @NotBlank
     private String numeroConta;
 
-    @NotNull @NotBlank
+    @NotNull
+    @NotBlank
     private String limiteConta;
 
     @NotNull
-    @Digits(integer=15, fraction=2)
+    @Digits(integer = 15, fraction = 2)
     private BigDecimal saldoConta;
 
     // private List<TipoConta> tipoConta = new ArrayList<>();
@@ -42,7 +46,7 @@ public class ContaBancaria {
     @JoinColumn(name = "tipoConta")
     private TipoConta tipoConta;
 
-    public ContaBancaria(){
+    public ContaBancaria() {
     }
 
     public ContaBancaria(Long idConta, String descricaoConta, String agenciaConta, String numeroConta, String limiteConta, BigDecimal saldoConta, TipoConta tipoConta) {
@@ -126,11 +130,11 @@ public class ContaBancaria {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ContaBancaria that = (ContaBancaria) o;
-        return Objects.equals(idConta, that.idConta);
+        return Objects.equals(idConta, that.idConta) && Objects.equals(numeroConta, that.numeroConta);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(idConta);
+        return Objects.hash(idConta, numeroConta);
     }
 }

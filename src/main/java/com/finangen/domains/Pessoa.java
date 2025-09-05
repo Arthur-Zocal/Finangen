@@ -45,7 +45,7 @@ public abstract class Pessoa {
 
     public Pessoa() { addTipoPessoa(TipoPessoa.USUARIO);}
 
-    public Pessoa(Long id, String nome, String rg, String cpf, String numCelular, String email, String senha, Set<Integer> tipoPessoa) {
+    public Pessoa(Long id, String nome, String rg, String cpf, String numCelular, String email, String senha) {
         this.id = id;
         this.nome = nome;
         this.rg = rg;
@@ -53,7 +53,6 @@ public abstract class Pessoa {
         this.numCelular = numCelular;
         this.email = email;
         this.senha = senha;
-        addTipoPessoa(TipoPessoa.USUARIO);
     }
 
     public Long getId(){ return id; }
@@ -99,11 +98,11 @@ public abstract class Pessoa {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pessoa pessoa = (Pessoa) o;
-        return Objects.equals(id, pessoa.id) && Objects.equals(cpf, pessoa.cpf);
+        return Objects.equals(id, pessoa.id) && Objects.equals(cpf, pessoa.cpf) && Objects.equals(email, pessoa.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cpf);
+        return Objects.hash(id, cpf, email);
     }
 }

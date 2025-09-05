@@ -12,9 +12,9 @@ public class DevConfig {
     @Autowired
     private DBService dbService;
 
-   /* @PostConstruct
+    @PostConstruct
     public void initDB(){
         this.dbService.initDB();
-    }*/
+    }
 
 }

@@ -3,17 +3,23 @@ package com.finangen.resources.exceptions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ValidationError extends StandardError{
+public class ValidationError extends StandardError {
+
     private List<FieldMessage> errors = new ArrayList<>();
 
-    public ValidationError(){super();}
-
-    public ValidationError(Long timeStamp, Integer status, String error, String message, String path, List<FieldMessage> errors) {
-        super(timeStamp, status, error, message, path);
-        this.errors = errors;
+    public ValidationError(){
+        super();
     }
 
-    public List<FieldMessage> getErrors(){return errors;}
+    public ValidationError(Long timeStamp, Integer status, String error, String message, String path) {
+        super(timeStamp, status, error, message, path);
+    }
 
-    public void addErrors(String fieldName, String message){this.errors.add(new FieldMessage(fieldName, message));}
+    public List<FieldMessage> getErrors() {
+        return errors;
+    }
+
+    public void addErrors(String fieldName, String message) {
+        this.errors.add(new FieldMessage(fieldName, message));
+    }
 }

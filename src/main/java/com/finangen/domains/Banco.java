@@ -67,11 +67,11 @@ public class Banco {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Banco banco = (Banco) o;
-        return Objects.equals(idBanco, banco.idBanco);
+        return Objects.equals(idBanco, banco.idBanco) && Objects.equals(razaoSocial, banco.razaoSocial);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(idBanco);
+        return Objects.hash(idBanco, razaoSocial);
     }
 }

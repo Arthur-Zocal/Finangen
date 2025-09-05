@@ -9,12 +9,13 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 @Profile("test")
 public class TestConfig {
+
     @Autowired
     private DBService dbService;
 
-    /*@PostConstruct
+    @PostConstruct
     public void initDB(){
         this.dbService.initDB();
     }
-*/
+
 }
