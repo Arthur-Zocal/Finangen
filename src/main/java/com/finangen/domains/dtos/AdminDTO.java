@@ -39,19 +39,22 @@ public class AdminDTO {
     @NotBlank(message = "O campo senha não pode ser vazio")
     protected String senha;
 
+    protected Integer status;
+
     protected Set<Integer> tipoPessoa = new HashSet<>();
 
     public AdminDTO() { }
 
-    public AdminDTO(Admin obj) {
-        this.id = obj.getId();
-        this.nome = obj.getNome();
-        this.rg = obj.getRg();
-        this.cpf = obj.getCpf();
-        this.numCelular = obj.getNumCelular();
-        this.email = obj.getEmail();
-        this.senha = obj.getSenha();
-        this.tipoPessoa = obj.getTipoPessoa().stream().map(TipoPessoa::getId).collect(Collectors.toSet());
+    public AdminDTO(Admin admin) {
+        this.id = admin.getId();
+        this.nome = admin.getNome();
+        this.rg = admin.getRg();
+        this.cpf = admin.getCpf();
+        this.numCelular = admin.getNumCelular();
+        this.email = admin.getEmail();
+        this.senha = admin.getSenha();
+        this.status = admin.getStatus().getId();
+        this.tipoPessoa.stream().map(TipoPessoa::toEnum).collect(Collectors.toSet());
     }
 
     public Long getId() {
@@ -62,58 +65,67 @@ public class AdminDTO {
         this.id = id;
     }
 
-    public String getNome() {
+    public @NotNull(message = "O campo nome não pode ser nulo") @NotBlank(message = "O campo nome não pode ser vazio") String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(@NotNull(message = "O campo nome não pode ser nulo") @NotBlank(message = "O campo nome não pode ser vazio") String nome) {
         this.nome = nome;
     }
 
-    public String getRg() {
+    public @NotNull(message = "O campo rg não pode ser nulo") @NotBlank(message = "O campo rg não pode ser vazio") String getRg() {
         return rg;
     }
 
-    public void setRg(String rg) {
+    public void setRg(@NotNull(message = "O campo rg não pode ser nulo") @NotBlank(message = "O campo rg não pode ser vazio") String rg) {
         this.rg = rg;
     }
 
-    public String getCpf() {
+    public @NotNull(message = "O campo CPF não pode ser nulo!") @CPF String getCpf() {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(@NotNull(message = "O campo CPF não pode ser nulo!") @CPF String cpf) {
         this.cpf = cpf;
     }
 
-    public String getNumCelular() {
+    public @NotNull(message = "O campo numCelular não pode ser vazio") @NotBlank(message = "O campo numCelular não pode ser vazio") String getNumCelular() {
         return numCelular;
     }
 
-    public void setNumCelular(String numCelular) {
+    public void setNumCelular(@NotNull(message = "O campo numCelular não pode ser vazio") @NotBlank(message = "O campo numCelular não pode ser vazio") String numCelular) {
         this.numCelular = numCelular;
     }
 
-    public String getEmail() {
+    public @NotNull(message = "O campo email não pode ser vazio") @NotBlank(message = "O campo email não pode ser vazio") String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(@NotNull(message = "O campo email não pode ser vazio") @NotBlank(message = "O campo email não pode ser vazio") String email) {
         this.email = email;
     }
 
-    public String getSenha() {
+    public @NotNull(message = "O campo senha não pode ser vazio") @NotBlank(message = "O campo senha não pode ser vazio") String getSenha() {
         return senha;
     }
 
-    public void setSenha(String senha) {
+    public void setSenha(@NotNull(message = "O campo senha não pode ser vazio") @NotBlank(message = "O campo senha não pode ser vazio") String senha) {
         this.senha = senha;
     }
 
-    public Set<TipoPessoa> getTipoPessoa(){
-        return tipoPessoa == null ? Collections.emptySet() :
-                tipoPessoa.stream().map(TipoPessoa::toEnum).collect(Collectors.toSet());
+    public Integer getStatus() {
+        return status;
     }
 
-    public void addTipoPessoa(TipoPessoa tipoPessoa){ this.tipoPessoa.add(tipoPessoa.getId()); }
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public Set<Integer> getTipoPessoa() {
+        return tipoPessoa ;
+    }
+
+    public void setTipoPessoa(Set<Integer> tipoPessoa) {
+        this.tipoPessoa = tipoPessoa;
+    }
 }

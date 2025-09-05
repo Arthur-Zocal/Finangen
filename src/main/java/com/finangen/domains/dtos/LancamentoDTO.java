@@ -39,6 +39,21 @@ public class LancamentoDTO {
     private int tipoLancamento;
     private int situacao;
 
+    @NotNull(message = " ")
+    private Long id;
+    private String nome;
+    private String cpf;
+
+    @NotNull(message = "")
+    private Long idCategoria;
+    private String descricaoCategoria;
+
+    @NotNull(message = "")
+    private Long idConta;
+    private String descricaoConta;
+    private String numeroConta;
+    private String agenciaConta;
+
     public LancamentoDTO() {}
 
     public LancamentoDTO(Lancamento lancamento) {
@@ -50,6 +65,18 @@ public class LancamentoDTO {
         this.valorLancamento = lancamento.getValorLancamento();
         this.tipoLancamento = lancamento.getTipoLancamento().getId();
         this.situacao = lancamento.getSituacao().getId();
+
+        this.id = lancamento.getPessoa().getId();
+        this.nome = lancamento.getPessoa().getNome();
+        this.cpf = lancamento.getPessoa().getCpf();
+
+        this.idCategoria = lancamento.getCategoria().getIdCategoria();
+        this.descricaoCategoria = lancamento.getCategoria().getDescricaoCategoria();
+
+        this.idConta = lancamento.getContaBancaria().getIdConta();
+        this.descricaoConta = lancamento.getContaBancaria().getDescricaoConta();
+        this.numeroConta = lancamento.getContaBancaria().getNumeroConta();
+        this.agenciaConta = lancamento.getContaBancaria().getAgenciaConta();
     }
 
     public Long getIdLancamento() {
@@ -114,5 +141,77 @@ public class LancamentoDTO {
 
     public void setSituacao(int situacao) {
         this.situacao = situacao;
+    }
+
+    public @NotNull(message = " ") Long getId() {
+        return id;
+    }
+
+    public void setId(@NotNull(message = " ") Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public @NotNull(message = "") Long getIdCategoria() {
+        return idCategoria;
+    }
+
+    public void setIdCategoria(@NotNull(message = "") Long idCategoria) {
+        this.idCategoria = idCategoria;
+    }
+
+    public String getDescricaoCategoria() {
+        return descricaoCategoria;
+    }
+
+    public void setDescricaoCategoria(String descricaoCategoria) {
+        this.descricaoCategoria = descricaoCategoria;
+    }
+
+    public @NotNull(message = "") Long getIdConta() {
+        return idConta;
+    }
+
+    public void setIdConta(@NotNull(message = "") Long idConta) {
+        this.idConta = idConta;
+    }
+
+    public String getDescricaoConta() {
+        return descricaoConta;
+    }
+
+    public void setDescricaoConta(String descricaoConta) {
+        this.descricaoConta = descricaoConta;
+    }
+
+    public String getNumeroConta() {
+        return numeroConta;
+    }
+
+    public void setNumeroConta(String numeroConta) {
+        this.numeroConta = numeroConta;
+    }
+
+    public String getAgenciaConta() {
+        return agenciaConta;
+    }
+
+    public void setAgenciaConta(String agenciaConta) {
+        this.agenciaConta = agenciaConta;
     }
 }

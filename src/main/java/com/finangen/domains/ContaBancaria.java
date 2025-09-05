@@ -1,5 +1,6 @@
 package com.finangen.domains;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.finangen.domains.dtos.ContaBancariaDTO;
 import com.finangen.domains.enums.TipoConta;
 import jakarta.persistence.*;
@@ -41,15 +42,26 @@ public class ContaBancaria {
     @Digits(integer = 15, fraction = 2)
     private BigDecimal saldoConta;
 
-    // private List<TipoConta> tipoConta = new ArrayList<>();
     @Enumerated(EnumType.ORDINAL)
     @JoinColumn(name = "tipoConta")
     private TipoConta tipoConta;
 
+    @ManyToOne
+    @JoinColumn(name = "idpessoa")
+    private Pessoa pessoa;
+
+    @ManyToOne
+    @JoinColumn(name = "idbanco")
+    private Banco banco;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "lancamento")
+    private List<Lancamento> lancamentos = new ArrayList<>();
+
     public ContaBancaria() {
     }
 
-    public ContaBancaria(Long idConta, String descricaoConta, String agenciaConta, String numeroConta, String limiteConta, BigDecimal saldoConta, TipoConta tipoConta) {
+    public ContaBancaria(Long idConta, String descricaoConta, String agenciaConta, String numeroConta, String limiteConta, BigDecimal saldoConta, TipoConta tipoConta, Pessoa pessoa, Banco banco) {
         this.idConta = idConta;
         this.descricaoConta = descricaoConta;
         this.agenciaConta = agenciaConta;
@@ -57,6 +69,8 @@ public class ContaBancaria {
         this.limiteConta = limiteConta;
         this.saldoConta = saldoConta;
         this.tipoConta = tipoConta;
+        this.pessoa = pessoa;
+        this.banco = banco;
     }
 
     public ContaBancaria(ContaBancariaDTO dto) {
@@ -123,6 +137,30 @@ public class ContaBancaria {
 
     public void setTipoConta(TipoConta tipoConta) {
         this.tipoConta = tipoConta;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Banco getBanco() {
+        return banco;
+    }
+
+    public void setBanco(Banco banco) {
+        this.banco = banco;
+    }
+
+    public List<Lancamento> getLancamentos() {
+        return lancamentos;
+    }
+
+    public void setLancamentos(List<Lancamento> lancamentos) {
+        this.lancamentos = lancamentos;
     }
 
     @Override

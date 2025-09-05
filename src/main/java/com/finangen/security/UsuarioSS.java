@@ -1,7 +1,6 @@
 package com.finangen.security;
 
 import com.finangen.domains.Pessoa;
-import com.finangen.domains.Usuario;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -24,6 +23,7 @@ public class UsuarioSS implements UserDetails {
                 .collect(Collectors.toSet());
     }
 
+    @Override
     public Collection<? extends GrantedAuthority> getAuthorities(){
         return authorities;
     }

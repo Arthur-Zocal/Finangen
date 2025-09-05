@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/banco")
-@Tag(name = "Banco", description = "API para Gerenciamento de Banco")
-public class BancoResource {
+@RequestMapping(value = "/categoria")
+@Tag(name = "Categoria", description = "API para Gerenciamento de Categoria")
+public class CategoriaResource {
 }

@@ -45,9 +45,23 @@ public class Lancamento {
     @JoinColumn(name = "situacao")
     private Situacao situacao;
 
+    @ManyToOne
+    @JoinColumn(name = "idpessoa")
+    private Pessoa pessoa;
+
+    @ManyToOne
+    @JoinColumn(name = "idcategoria")
+    private Categoria categoria;
+
+
+    @ManyToOne
+    @JoinColumn(name = "idcontabancaria")
+    private ContaBancaria contaBancaria;
+
+
     public Lancamento() {}
 
-    public Lancamento(Long idLancamento, String descricao, LocalDate dataLancamento, LocalDate dataVencimento, LocalDate dataBaixa, BigDecimal valorLancamento, TipoLancamento tipoLancamento, Situacao situacao) {
+    public Lancamento(Long idLancamento, String descricao, LocalDate dataLancamento, LocalDate dataVencimento, LocalDate dataBaixa, BigDecimal valorLancamento, TipoLancamento tipoLancamento, Situacao situacao, Pessoa pessoa, Categoria categoria, ContaBancaria contaBancaria) {
         this.idLancamento = idLancamento;
         this.descricao = descricao;
         this.dataLancamento = dataLancamento;
@@ -56,6 +70,9 @@ public class Lancamento {
         this.valorLancamento = valorLancamento;
         this.tipoLancamento = tipoLancamento;
         this.situacao = situacao;
+        this.pessoa = pessoa;
+        this.categoria = categoria;
+        this.contaBancaria = contaBancaria;
     }
 
     public Lancamento(LancamentoDTO dto) {
@@ -131,6 +148,30 @@ public class Lancamento {
 
     public void setSituacao(Situacao situacao) {
         this.situacao = situacao;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public ContaBancaria getContaBancaria() {
+        return contaBancaria;
+    }
+
+    public void setContaBancaria(ContaBancaria contaBancaria) {
+        this.contaBancaria = contaBancaria;
     }
 
     @Override

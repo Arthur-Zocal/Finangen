@@ -34,6 +34,15 @@ public class ContaBancariaDTO {
 
     private int tipoConta;
 
+    @NotNull(message = " ")
+    private Long id;
+    private String nome;
+    private String cpf;
+
+    @NotNull(message = "")
+    private Long idBanco;
+    private String razaoSocial;
+
     public ContaBancariaDTO() {}
 
     public ContaBancariaDTO(ContaBancaria contaBancaria) {
@@ -44,6 +53,13 @@ public class ContaBancariaDTO {
         this.limiteConta = contaBancaria.getLimiteConta();
         this.saldoConta = contaBancaria.getSaldoConta();
         this.tipoConta = contaBancaria.getTipoConta().getId();
+
+        this.id = contaBancaria.getPessoa().getId();
+        this.nome = contaBancaria.getPessoa().getNome();
+        this.cpf = contaBancaria.getPessoa().getCpf();
+
+        this.idBanco = contaBancaria.getBanco().getIdBanco();
+        this.razaoSocial = contaBancaria.getBanco().getRazaoSocial();
     }
 
     public Long getIdConta() {
@@ -100,5 +116,45 @@ public class ContaBancariaDTO {
 
     public void setTipoConta(int tipoConta) {
         this.tipoConta = tipoConta;
+    }
+
+    public @NotNull(message = " ") Long getId() {
+        return id;
+    }
+
+    public void setId(@NotNull(message = " ") Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public @NotNull(message = "") Long getIdBanco() {
+        return idBanco;
+    }
+
+    public void setIdBanco(@NotNull(message = "") Long idBanco) {
+        this.idBanco = idBanco;
+    }
+
+    public String getRazaoSocial() {
+        return razaoSocial;
+    }
+
+    public void setRazaoSocial(String razaoSocial) {
+        this.razaoSocial = razaoSocial;
     }
 }

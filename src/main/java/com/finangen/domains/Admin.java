@@ -17,21 +17,22 @@ public class Admin extends Pessoa{
     @JoinColumn(name="admin")
     private Admin admin;
 
-    public Admin(Long id, String nome, String rg, String cpf, String numCelular, String email, String senha) {
-        super(id, nome, rg, cpf, numCelular, email, senha);
+    public Admin(Long id, String nome, String rg, String cpf, String numCelular, String email, String senha, Status status) {
+        super(id, nome, rg, cpf, numCelular, email, senha, status);
         addTipoPessoa(TipoPessoa.ADMIN);
     }
 
-    public Admin(AdminDTO obj){
+    public Admin(AdminDTO dto){
 
-        this.id = obj.getId();
-        this.nome = obj.getNome();
-        this.rg = obj.getRg();
-        this.cpf = obj.getCpf();
-        this.numCelular = obj.getNumCelular();
-        this.email = obj.getEmail();
-        this.senha = obj.getSenha();
-        this.tipoPessoa = obj.getTipoPessoa().stream()
+        this.id = dto.getId();
+        this.nome = dto.getNome();
+        this.rg = dto.getRg();
+        this.cpf = dto.getCpf();
+        this.numCelular = dto.getNumCelular();
+        this.email = dto.getEmail();
+        this.senha = dto.getSenha();
+        this.status = Status.toEnum(dto.getStatus());
+        this.tipoPessoa = dto.getTipoPessoa().stream()
                 .map(x -> x.getId()).collect(Collectors.toSet());
         addTipoPessoa(TipoPessoa.ADMIN);
     }
