@@ -41,12 +41,12 @@ public class CategoriaService {
         return categoriaRepo.save(oldObj);
     }
 
-    /*public void delete(Long id) {
+    public void delete(Long id) {
         Categoria obj = findById(id);
-        if (obj.get().size() > 0) {
+        if (obj.getLancamentos().size() > 0) {
             throw new DataIntegrityViolationException("Banco não pode ser deletado pois possui cadastrados ativos");
         }
         categoriaRepo.deleteById(id);
-    }*/
+    }
 
 }

@@ -70,6 +70,10 @@ public class Categoria {
         this.pessoa = pessoa;
     }
 
+    public List<Lancamento> getLancamentos(){
+        return lancamentos;
+    }
+
     public void setLancamentos(List<Lancamento> lancamentos) {
         this.lancamentos = lancamentos;
     }

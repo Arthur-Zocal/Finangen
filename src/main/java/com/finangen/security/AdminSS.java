@@ -1,6 +1,7 @@
 package com.finangen.security;
 
 import com.finangen.domains.Admin;
+import com.finangen.domains.Pessoa;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,10 +16,10 @@ public class AdminSS implements UserDetails {
 
     private Collection<? extends GrantedAuthority> authorities;
 
-    public AdminSS(Admin admim){
-        this.username = admim.getEmail();
-        this.password = admim.getSenha();
-        this.authorities = admim.getTipoPessoa().stream()
+    public AdminSS(Pessoa admin){
+        this.username = admin.getEmail();
+        this.password = admin.getSenha();
+        this.authorities = admin.getTipoPessoa().stream()
                 .map(x -> new SimpleGrantedAuthority(x.getTipoPessoa()))
                 .collect(Collectors.toSet());
     }

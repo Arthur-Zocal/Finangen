@@ -57,18 +57,14 @@ public class UsuarioService {
         oldObj = new Usuario(objDto);
         return usuarioRepo.save(oldObj);
     }
-
-    /*
-
+/*
     public void delete(Long id) {
         Usuario obj = findById(id);
-        if (obj.) {
+        if (obj.getContaBancarias().) {
             throw new DataIntegrityViolationException("Usuário não pode ser deletado pois possui cadastros ativos");
         }
         usuarioRepo.deleteById(id);
-    }
-
-    */
+    }*/
 
     private void ValidaPorCPFeEmail(UsuarioDTO objDto) {
         Optional<Usuario> obj = usuarioRepo.findByCpf(objDto.getCpf());

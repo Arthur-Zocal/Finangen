@@ -46,6 +46,25 @@ public class DBService {
         bancoRepo.save(banco1);
         bancoRepo.save(banco2);
 
+        //  Admin
+        Admin admin1 = new Admin(null,"Pedro Costa","00.000.000-1","000.000.000-1","(00)00000 0001","pedrocosta@gmail.com",encoder.encode("001"),Status.ATIVO);
+        Admin admin2 = new Admin(null,"Gabriel Barriga","00.000.000-2","000.000.000-2","(00)00000 0002","pedrobarriga@gmail.com",encoder.encode("002"),Status.INATIVO);
+
+        adminRepo.save(admin1);
+        adminRepo.save(admin2);
+
+        //  Usuario
+        Usuario usuario1 = new Usuario(null,"João Mamão","00.000.000-3","000.000.000-3","(00)00000 0003","joaomamao@gmail.com",encoder.encode("003"),Status.ATIVO);
+        Usuario usuario2 = new Usuario(null,"Italo Parachoque","00.000.000-4","000.000.000-4","(00)00000 0004","italoparachoque@gmail.com",encoder.encode("004"),Status.INATIVO);
+
+        usuarioRepo.save(usuario1);
+        usuarioRepo.save(usuario2);
+
+        //  Categoria
+        Categoria categoria1 = new Categoria(null,"Compra", usuario1);
+        Categoria categoria2 = new Categoria(null,"Salario", usuario2);
+
+
         //  Conta Bancaria
         ContaBancaria contaBancaria1 = new ContaBancaria(null,"Conta Corrente","0678","53374-1","12",new BigDecimal("32000.00"), TipoConta.CONTACORRENTE,usuario1,banco1);
         ContaBancaria contaBancaria2 = new ContaBancaria(null,"Conta Investimento","A","0678","53374-2",new BigDecimal("32000.00"), TipoConta.CONTAINVESTIMENTO,usuario1,banco1);
@@ -68,24 +87,7 @@ public class DBService {
         lancamentoRepo.save(lancamento2);
         lancamentoRepo.save(lancamento3);
 
-        //  Categoria
-       Categoria categoria1 = new Categoria(null,"Compra", usuario1);
-       Categoria categoria2 = new Categoria(null,"Salario", usuario2);
 
-
-        //  Admin
-        Admin admin1 = new Admin(null,"Pedro Costa","00.000.000-1","000.000.000-1","(00)00000 0001","pedrocosta@gmail.com",encoder.encode("001"),Status.ATIVO);
-        Admin admin2 = new Admin(null,"Gabriel Barriga","00.000.000-2","000.000.000-2","(00)00000 0002","pedrobarriga@gmail.com",encoder.encode("002"),Status.INATIVO);
-
-        adminRepo.save(admin1);
-        adminRepo.save(admin2);
-
-        //  Usuario
-        Usuario usuario1 = new Usuario(null,"João Mamão","00.000.000-3","000.000.000-3","(00)00000 0003","joaomamao@gmail.com",encoder.encode("003"),Status.ATIVO);
-        Usuario usuario2 = new Usuario(null,"Italo Parachoque","00.000.000-4","000.000.000-4","(00)00000 0004","italoparachoque@gmail.com",encoder.encode("004"),Status.INATIVO);
-
-        usuarioRepo.save(usuario1);
-        usuarioRepo.save(usuario2);
     }
 
 }

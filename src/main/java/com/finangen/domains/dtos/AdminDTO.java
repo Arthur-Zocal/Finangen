@@ -121,11 +121,12 @@ public class AdminDTO {
         this.status = status;
     }
 
-    public Set<Integer> getTipoPessoa() {
-        return tipoPessoa ;
+    public Set<TipoPessoa> getTipoPessoa() {
+        return tipoPessoa == null ? Collections.emptySet() :
+                tipoPessoa.stream().map(TipoPessoa::toEnum)
+                        .collect(Collectors.toSet());
     }
-
-    public void setTipoPessoa(Set<Integer> tipoPessoa) {
-        this.tipoPessoa = tipoPessoa;
+    public void addTipoPessoa(TipoPessoa tipoPessoa) {
+        this.tipoPessoa.add(tipoPessoa.getId());
     }
 }

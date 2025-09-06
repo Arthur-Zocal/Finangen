@@ -18,14 +18,14 @@ public class UsuarioDTO {
     @NotBlank(message = "O campo nome não pode ser vazio")
     protected String nome;
 
-    @NotNull(message="O campo RG não pode ser nulo")
+    @NotNull(message = "O campo RG não pode ser nulo")
     protected String rg;
 
-    @NotNull(message="O campo CPF não pode ser nulo!")
+    @NotNull(message = "O campo CPF não pode ser nulo!")
     @CPF
     protected String cpf;
 
-    @NotBlank(message="O campo numCelular não pode estar vazio!")
+    @NotBlank(message = "O campo numCelular não pode estar vazio!")
     protected String numCelular;
 
     @NotNull(message = "O campo email não pode ser nulo")
@@ -40,7 +40,8 @@ public class UsuarioDTO {
 
     protected Set<Integer> tipoPessoa = new HashSet<>();
 
-    public UsuarioDTO() {}
+    public UsuarioDTO() {
+    }
 
     public UsuarioDTO(Usuario usuario) {
         this.id = usuario.getId();
@@ -118,11 +119,13 @@ public class UsuarioDTO {
         this.status = status;
     }
 
-    public Set<Integer> getTipoPessoa() {
-        return tipoPessoa;
+    public Set<TipoPessoa> getTipoPessoa() {
+        return tipoPessoa == null ? Collections.emptySet() :
+                tipoPessoa.stream().map(TipoPessoa::toEnum)
+                        .collect(Collectors.toSet());
     }
 
-    public void setTipoPessoa(Set<Integer> tipoPessoa) {
-        this.tipoPessoa = tipoPessoa;
+    public void addTipoPessoa(TipoPessoa tipoPessoa) {
+        this.tipoPessoa.add(tipoPessoa.getId());
     }
 }

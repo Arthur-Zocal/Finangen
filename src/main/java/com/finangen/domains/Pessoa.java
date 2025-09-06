@@ -143,8 +143,8 @@ public abstract class Pessoa {
         this.status = status;
     }
 
-    public Set<Integer> getTipoPessoa() {
-        return tipoPessoa;
+    public Set<TipoPessoa> getTipoPessoa() {
+        return tipoPessoa.stream().map(TipoPessoa::toEnum).collect(Collectors.toSet());
     }
 
     public void setTipoPessoa(Set<Integer> tipoPessoa) {
