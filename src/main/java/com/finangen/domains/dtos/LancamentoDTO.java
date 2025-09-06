@@ -39,16 +39,16 @@ public class LancamentoDTO {
     private int tipoLancamento;
     private int situacao;
 
-    @NotNull(message = " ")
+    @NotNull(message = " Campo Pessoa é obrigatório")
     private Long id;
     private String nome;
     private String cpf;
 
-    @NotNull(message = "")
+    @NotNull(message = "Campo Categoria é obrigatório")
     private Long idCategoria;
     private String descricaoCategoria;
 
-    @NotNull(message = "")
+    @NotNull(message = "Campo Conta é obrigatório")
     private Long idConta;
     private String descricaoConta;
     private String numeroConta;

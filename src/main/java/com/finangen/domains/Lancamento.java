@@ -53,9 +53,8 @@ public class Lancamento {
     @JoinColumn(name = "idcategoria")
     private Categoria categoria;
 
-
     @ManyToOne
-    @JoinColumn(name = "idcontabancaria")
+    @JoinColumn(name = "idconta")
     private ContaBancaria contaBancaria;
 
 

@@ -28,7 +28,7 @@ public class Banco {
     private Status status;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "contabancaria")
+    @OneToMany(mappedBy = "banco")
     private List<ContaBancaria> contaBancarias = new ArrayList<>();
 
     public Banco() {}

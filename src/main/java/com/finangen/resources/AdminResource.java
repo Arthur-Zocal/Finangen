@@ -19,7 +19,7 @@ import java.util.List;
 @Tag(name = "Admin", description = "API para Gerenciamento de Admins")
 public class AdminResource {
 
-    @Autowired
+  /*  @Autowired
     private AdminService adminService;
 
     @GetMapping
@@ -28,6 +28,6 @@ public class AdminResource {
         return ResponseEntity.ok().body(adminService.findAll());
     }
 
-
+*/
 
 }

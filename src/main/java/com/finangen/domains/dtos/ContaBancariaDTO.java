@@ -34,12 +34,12 @@ public class ContaBancariaDTO {
 
     private int tipoConta;
 
-    @NotNull(message = " ")
+    @NotNull(message = "Campo Pessoa é obrigatório")
     private Long id;
     private String nome;
     private String cpf;
 
-    @NotNull(message = "")
+    @NotNull(message = "Campo Banco é obrigatório")
     private Long idBanco;
     private String razaoSocial;
 

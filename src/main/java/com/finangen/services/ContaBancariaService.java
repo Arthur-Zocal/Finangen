@@ -44,7 +44,7 @@ public class ContaBancariaService {
 
    public void delete(Long id) {
         ContaBancaria obj = findById(id);
-        if (obj.getLancamentos().size()>0) {
+        if (obj.getLancamentos().size() > 0) {
             throw new DataIntegrityViolationException("Conta Bancaria não pode ser deletada pois possui cadastrados ativos");
         }
         contaBancariaRepo.deleteById(id);

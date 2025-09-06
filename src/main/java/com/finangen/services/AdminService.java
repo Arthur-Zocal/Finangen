@@ -57,18 +57,13 @@ public class AdminService {
         return adminRepo.save(oldObj);
     }
 
-    /*
-
     public void delete(Long id) {
         Admin obj = findById(id);
-        if (obj.) {
-            throw new DataIntegrityViolationException("Admin não pode ser deletado pois possui cadastros ativos");
+        if (obj.getContaBancarias().size() > 0 && obj.getCategorias().size() > 0 && obj.getLancamentos().size() >0) {
+            throw new DataIntegrityViolationException("Usuário não pode ser deletado pois possui cadastros ativos");
         }
         adminRepo.deleteById(id);
     }
-
-    */
-
 
     private void ValidaPorCPFeEmail(AdminDTO objDto) {
         Optional<Admin> obj = adminRepo.findByCpf(objDto.getCpf());

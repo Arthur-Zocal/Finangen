@@ -12,7 +12,7 @@ public class CategoriaDTO {
     @NotBlank(message = "O campo Descrição não pode ser nulo")
     private String descricaoCategoria;
 
-    @NotNull(message = " ")
+    @NotNull(message = "Campo Pessoa é obrigatório")
     private Long id;
     private String nome;
     private String cpf;

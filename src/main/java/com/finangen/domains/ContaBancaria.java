@@ -55,7 +55,7 @@ public class ContaBancaria {
     private Banco banco;
 
     @JsonIgnore
-    @ManyToMany(mappedBy = "lancamento")
+    @ManyToMany(mappedBy = "contaBancaria")
     private List<Lancamento> lancamentos = new ArrayList<>();
 
     public ContaBancaria() {

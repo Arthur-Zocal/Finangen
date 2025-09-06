@@ -47,15 +47,15 @@ public abstract class Pessoa {
     protected Set<Integer> tipoPessoa = new HashSet<>();
 
     @JsonIgnore
-    @OneToMany(mappedBy = "lancamentopessoa")
+    @OneToMany(mappedBy = "pessoa")
     private List<Lancamento> lancamentos= new ArrayList<>();
 
     @JsonIgnore
-    @OneToMany(mappedBy = "categoriapessoa")
+    @OneToMany(mappedBy = "pessoa")
     private List<Categoria> categorias = new ArrayList<>();
 
     @JsonIgnore
-    @OneToMany(mappedBy = "contabancariapessoa")
+    @OneToMany(mappedBy = "pessoa")
     private List<ContaBancaria> contaBancarias = new ArrayList<>();
 
     public Pessoa() { addTipoPessoa(TipoPessoa.USUARIO);}

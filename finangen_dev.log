@@ -1,0 +1,1671 @@
+2025-09-05T23:24:09.925-03:00  INFO 13768 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.13 with PID 13768 (C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen\target\classes started by ARTHUR in C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen)
+2025-09-05T23:24:09.927-03:00  INFO 13768 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "dev"
+2025-09-05T23:24:09.978-03:00  INFO 13768 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-05T23:24:09.979-03:00  INFO 13768 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-05T23:24:10.514-03:00  INFO 13768 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-05T23:24:10.568-03:00  INFO 13768 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 7 JPA repository interfaces.
+2025-09-05T23:24:11.291-03:00  INFO 13768 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-05T23:24:11.302-03:00  INFO 13768 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-05T23:24:11.302-03:00  INFO 13768 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-05T23:24:11.352-03:00  INFO 13768 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-05T23:24:11.353-03:00  INFO 13768 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1373 ms
+2025-09-05T23:24:11.377-03:00  INFO 13768 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-05T23:24:11.559-03:00  INFO 13768 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4091ee1e
+2025-09-05T23:24:11.560-03:00  INFO 13768 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-05T23:24:11.571-03:00  INFO 13768 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bd_finangen'
+2025-09-05T23:24:11.672-03:00  INFO 13768 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-05T23:24:11.742-03:00  INFO 13768 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-05T23:24:11.772-03:00  INFO 13768 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-05T23:24:12.039-03:00  INFO 13768 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-05T23:24:12.289-03:00 ERROR 13768 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Collection 'com.finangen.domains.Pessoa.categorias' is 'mappedBy' a property named 'categoriapessoa' which does not exist in the target entity 'com.finangen.domains.Categoria'
+2025-09-05T23:24:12.289-03:00  WARN 13768 --- [Finangen] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.finangen.domains.Pessoa.categorias' is 'mappedBy' a property named 'categoriapessoa' which does not exist in the target entity 'com.finangen.domains.Categoria'
+2025-09-05T23:24:12.291-03:00  INFO 13768 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-05T23:24:12.295-03:00  INFO 13768 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-05T23:24:12.298-03:00  INFO 13768 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-05T23:24:12.309-03:00  INFO 13768 --- [Finangen] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-05T23:24:12.325-03:00 ERROR 13768 --- [Finangen] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.finangen.domains.Pessoa.categorias' is 'mappedBy' a property named 'categoriapessoa' which does not exist in the target entity 'com.finangen.domains.Categoria'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.finangen.Finangen.FinangenApplication.main(FinangenApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.5.jar:3.3.5]
+Caused by: org.hibernate.AnnotationException: Collection 'com.finangen.domains.Pessoa.categorias' is 'mappedBy' a property named 'categoriapessoa' which does not exist in the target entity 'com.finangen.domains.Categoria'
+	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1639) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1653) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1614) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1605) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1811) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1770) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.14.jar:6.1.14]
+	... 20 common frames omitted
+
+2025-09-05T23:31:33.973-03:00  INFO 3644 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.13 with PID 3644 (C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen\target\classes started by ARTHUR in C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen)
+2025-09-05T23:31:33.976-03:00  INFO 3644 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "dev"
+2025-09-05T23:31:34.013-03:00  INFO 3644 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-05T23:31:34.014-03:00  INFO 3644 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-05T23:31:34.479-03:00  INFO 3644 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-05T23:31:34.526-03:00  INFO 3644 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 7 JPA repository interfaces.
+2025-09-05T23:31:35.177-03:00  INFO 3644 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-05T23:31:35.189-03:00  INFO 3644 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-05T23:31:35.189-03:00  INFO 3644 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-05T23:31:35.235-03:00  INFO 3644 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-05T23:31:35.235-03:00  INFO 3644 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1221 ms
+2025-09-05T23:31:35.259-03:00  INFO 3644 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-05T23:31:35.411-03:00  INFO 3644 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a4ee2fc
+2025-09-05T23:31:35.414-03:00  INFO 3644 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-05T23:31:35.424-03:00  INFO 3644 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bd_finangen'
+2025-09-05T23:31:35.509-03:00  INFO 3644 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-05T23:31:35.557-03:00  INFO 3644 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-05T23:31:35.582-03:00  INFO 3644 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-05T23:31:35.825-03:00  INFO 3644 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-05T23:31:36.065-03:00 ERROR 3644 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'lancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+2025-09-05T23:31:36.065-03:00  WARN 3644 --- [Finangen] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'lancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+2025-09-05T23:31:36.066-03:00  INFO 3644 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-05T23:31:36.133-03:00  INFO 3644 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-05T23:31:36.135-03:00  INFO 3644 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-05T23:31:36.143-03:00  INFO 3644 --- [Finangen] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-05T23:31:36.158-03:00 ERROR 3644 --- [Finangen] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'lancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.finangen.Finangen.FinangenApplication.main(FinangenApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.5.jar:3.3.5]
+Caused by: org.hibernate.AnnotationException: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'lancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1639) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1653) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1614) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1605) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1811) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1770) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.14.jar:6.1.14]
+	... 20 common frames omitted
+
+2025-09-05T23:34:59.361-03:00  INFO 22592 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.13 with PID 22592 (C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen\target\classes started by ARTHUR in C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen)
+2025-09-05T23:34:59.362-03:00  INFO 22592 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "dev"
+2025-09-05T23:34:59.402-03:00  INFO 22592 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-05T23:34:59.403-03:00  INFO 22592 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-05T23:34:59.863-03:00  INFO 22592 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-05T23:34:59.905-03:00  INFO 22592 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 7 JPA repository interfaces.
+2025-09-05T23:35:00.548-03:00  INFO 22592 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-05T23:35:00.561-03:00  INFO 22592 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-05T23:35:00.561-03:00  INFO 22592 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-05T23:35:00.609-03:00  INFO 22592 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-05T23:35:00.610-03:00  INFO 22592 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1207 ms
+2025-09-05T23:35:00.637-03:00  INFO 22592 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-05T23:35:00.787-03:00  INFO 22592 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a4ee2fc
+2025-09-05T23:35:00.788-03:00  INFO 22592 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-05T23:35:00.797-03:00  INFO 22592 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bd_finangen'
+2025-09-05T23:35:00.881-03:00  INFO 22592 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-05T23:35:00.926-03:00  INFO 22592 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-05T23:35:00.963-03:00  INFO 22592 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-05T23:35:01.191-03:00  INFO 22592 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-05T23:35:01.424-03:00 ERROR 22592 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'lancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+2025-09-05T23:35:01.424-03:00  WARN 22592 --- [Finangen] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'lancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+2025-09-05T23:35:01.427-03:00  INFO 22592 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-05T23:35:01.485-03:00  INFO 22592 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-05T23:35:01.487-03:00  INFO 22592 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-05T23:35:01.495-03:00  INFO 22592 --- [Finangen] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-05T23:35:01.507-03:00 ERROR 22592 --- [Finangen] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'lancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.finangen.Finangen.FinangenApplication.main(FinangenApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.5.jar:3.3.5]
+Caused by: org.hibernate.AnnotationException: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'lancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1639) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1653) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1614) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1605) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1811) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1770) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.14.jar:6.1.14]
+	... 20 common frames omitted
+
+2025-09-05T23:36:28.752-03:00  INFO 19964 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.13 with PID 19964 (C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen\target\classes started by ARTHUR in C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen)
+2025-09-05T23:36:28.754-03:00  INFO 19964 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "dev"
+2025-09-05T23:36:28.796-03:00  INFO 19964 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-05T23:36:28.797-03:00  INFO 19964 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-05T23:36:29.291-03:00  INFO 19964 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-05T23:36:29.342-03:00  INFO 19964 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 7 JPA repository interfaces.
+2025-09-05T23:36:30.080-03:00  INFO 19964 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-05T23:36:30.091-03:00  INFO 19964 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-05T23:36:30.091-03:00  INFO 19964 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-05T23:36:30.139-03:00  INFO 19964 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-05T23:36:30.140-03:00  INFO 19964 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1343 ms
+2025-09-05T23:36:30.162-03:00  INFO 19964 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-05T23:36:30.312-03:00  INFO 19964 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25c9246d
+2025-09-05T23:36:30.313-03:00  INFO 19964 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-05T23:36:30.324-03:00  INFO 19964 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bd_finangen'
+2025-09-05T23:36:30.421-03:00  INFO 19964 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-05T23:36:30.474-03:00  INFO 19964 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-05T23:36:30.503-03:00  INFO 19964 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-05T23:36:30.742-03:00  INFO 19964 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-05T23:36:31.005-03:00 ERROR 19964 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'idlancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+2025-09-05T23:36:31.005-03:00  WARN 19964 --- [Finangen] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'idlancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+2025-09-05T23:36:31.006-03:00  INFO 19964 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-05T23:36:31.041-03:00  INFO 19964 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-05T23:36:31.044-03:00  INFO 19964 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-05T23:36:31.053-03:00  INFO 19964 --- [Finangen] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-05T23:36:31.067-03:00 ERROR 19964 --- [Finangen] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'idlancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.finangen.Finangen.FinangenApplication.main(FinangenApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.5.jar:3.3.5]
+Caused by: org.hibernate.AnnotationException: Collection 'com.finangen.domains.ContaBancaria.lancamentos' is 'mappedBy' a property named 'idlancamento' which does not exist in the target entity 'com.finangen.domains.Lancamento'
+	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1639) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1653) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1614) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1605) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1811) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1770) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.14.jar:6.1.14]
+	... 20 common frames omitted
+
+2025-09-05T23:39:05.072-03:00  INFO 23096 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.13 with PID 23096 (C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen\target\classes started by ARTHUR in C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen)
+2025-09-05T23:39:05.073-03:00  INFO 23096 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "dev"
+2025-09-05T23:39:05.116-03:00  INFO 23096 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-05T23:39:05.116-03:00  INFO 23096 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-05T23:39:05.587-03:00  INFO 23096 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-05T23:39:05.633-03:00  INFO 23096 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 7 JPA repository interfaces.
+2025-09-05T23:39:06.310-03:00  INFO 23096 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-05T23:39:06.321-03:00  INFO 23096 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-05T23:39:06.322-03:00  INFO 23096 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-05T23:39:06.370-03:00  INFO 23096 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-05T23:39:06.372-03:00  INFO 23096 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1256 ms
+2025-09-05T23:39:06.393-03:00  INFO 23096 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-05T23:39:06.559-03:00  INFO 23096 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57eb273c
+2025-09-05T23:39:06.561-03:00  INFO 23096 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-05T23:39:06.573-03:00  INFO 23096 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bd_finangen'
+2025-09-05T23:39:06.665-03:00  INFO 23096 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-05T23:39:06.711-03:00  INFO 23096 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-05T23:39:06.739-03:00  INFO 23096 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-05T23:39:06.976-03:00  INFO 23096 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-05T23:39:07.904-03:00  INFO 23096 --- [Finangen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-05T23:39:07.916-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       drop constraint if exists FKf9jcp7wlb205vun64i1b8h9mr
+2025-09-05T23:39:07.919-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.919-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "admin" não existe, ignorando
+2025-09-05T23:39:07.919-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       drop constraint if exists FKdb9aat2q6biw68ey0bxw40xdh
+2025-09-05T23:39:07.919-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.919-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "admin" não existe, ignorando
+2025-09-05T23:39:07.920-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists categoria 
+       drop constraint if exists FKb2m72y6k9qyv5jsorxidplapa
+2025-09-05T23:39:07.920-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.920-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "categoria" não existe, ignorando
+2025-09-05T23:39:07.920-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       drop constraint if exists FKg3l6o70y1y71mb0qtjtp3sjg8
+2025-09-05T23:39:07.920-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.921-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "conta_bancaria" não existe, ignorando
+2025-09-05T23:39:07.921-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       drop constraint if exists FKiq3idx9c3kivqpyljtkvecv63
+2025-09-05T23:39:07.921-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.921-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "conta_bancaria" não existe, ignorando
+2025-09-05T23:39:07.921-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FKk3d20uo9e9laou5iqo3lkpjhl
+2025-09-05T23:39:07.921-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.921-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "lancamento" não existe, ignorando
+2025-09-05T23:39:07.921-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FKjmv848bg85lfj5xokjduk8vt6
+2025-09-05T23:39:07.922-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.922-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "lancamento" não existe, ignorando
+2025-09-05T23:39:07.922-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FKbvn9jc4iu3egtmn9ydv8vuv06
+2025-09-05T23:39:07.922-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.922-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "lancamento" não existe, ignorando
+2025-09-05T23:39:07.922-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FK15jfs4y5v5hy9ys6o0gqu99uj
+2025-09-05T23:39:07.922-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.922-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "lancamento" não existe, ignorando
+2025-09-05T23:39:07.922-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       drop constraint if exists FKlnesgnyiynjyqx8ks8cyhv6il
+2025-09-05T23:39:07.923-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.923-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "perfis" não existe, ignorando
+2025-09-05T23:39:07.923-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists usuario 
+       drop constraint if exists FKnndxavgf8rogrx6jdmxbgm6s3
+2025-09-05T23:39:07.923-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.923-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relação "usuario" não existe, ignorando
+2025-09-05T23:39:07.923-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists admin cascade
+2025-09-05T23:39:07.924-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.924-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : tabela "admin" não existe, ignorando
+2025-09-05T23:39:07.924-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists banco cascade
+2025-09-05T23:39:07.924-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.924-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : tabela "banco" não existe, ignorando
+2025-09-05T23:39:07.924-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists categoria cascade
+2025-09-05T23:39:07.924-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.924-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : tabela "categoria" não existe, ignorando
+2025-09-05T23:39:07.926-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists conta_bancaria cascade
+2025-09-05T23:39:07.926-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.926-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : tabela "conta_bancaria" não existe, ignorando
+2025-09-05T23:39:07.926-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists lancamento cascade
+2025-09-05T23:39:07.926-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.926-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : tabela "lancamento" não existe, ignorando
+2025-09-05T23:39:07.926-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade
+2025-09-05T23:39:07.926-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.926-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : tabela "perfis" não existe, ignorando
+2025-09-05T23:39:07.926-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pessoa cascade
+2025-09-05T23:39:07.926-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.927-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : tabela "pessoa" não existe, ignorando
+2025-09-05T23:39:07.927-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists usuario cascade
+2025-09-05T23:39:07.927-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.927-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : tabela "usuario" não existe, ignorando
+2025-09-05T23:39:07.927-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_banco
+2025-09-05T23:39:07.927-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.927-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequência "seq_banco" não existe, ignorando
+2025-09-05T23:39:07.927-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_categoria
+2025-09-05T23:39:07.927-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.928-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequência "seq_categoria" não existe, ignorando
+2025-09-05T23:39:07.928-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_contabancaria
+2025-09-05T23:39:07.928-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.928-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequência "seq_contabancaria" não existe, ignorando
+2025-09-05T23:39:07.928-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_lancamento
+2025-09-05T23:39:07.928-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.928-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequência "seq_lancamento" não existe, ignorando
+2025-09-05T23:39:07.928-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pessoa
+2025-09-05T23:39:07.928-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-09-05T23:39:07.928-03:00  WARN 23096 --- [Finangen] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequência "seq_pessoa" não existe, ignorando
+2025-09-05T23:39:07.933-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_banco start with 1 increment by 50
+2025-09-05T23:39:07.942-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_categoria start with 1 increment by 50
+2025-09-05T23:39:07.943-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_contabancaria start with 1 increment by 50
+2025-09-05T23:39:07.944-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_lancamento start with 1 increment by 50
+2025-09-05T23:39:07.945-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pessoa start with 1 increment by 1
+2025-09-05T23:39:07.948-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table admin (
+        admin bigint,
+        id bigint not null,
+        primary key (id)
+    )
+2025-09-05T23:39:07.957-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table banco (
+        status smallint check (status between 0 and 1),
+        id_banco bigint not null,
+        razao_social varchar(255) not null,
+        primary key (id_banco)
+    )
+2025-09-05T23:39:07.961-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table categoria (
+        id_categoria bigint not null,
+        idpessoa bigint,
+        descricao_categoria varchar(255) not null,
+        primary key (id_categoria)
+    )
+2025-09-05T23:39:07.964-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table conta_bancaria (
+        saldo_conta numeric(17,2) not null,
+        tipo_conta smallint check (tipo_conta between 0 and 4),
+        id_conta bigint not null,
+        idbanco bigint,
+        idpessoa bigint,
+        agencia_conta varchar(255) not null,
+        descricao_conta varchar(255) not null,
+        limite_conta varchar(255) not null,
+        numero_conta varchar(255) not null,
+        primary key (id_conta)
+    )
+2025-09-05T23:39:07.969-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table lancamento (
+        data_baixa date,
+        data_lancamento date,
+        data_vencimento date,
+        situacao smallint check (situacao between 0 and 2),
+        tipo_lancamento smallint check (tipo_lancamento between 0 and 1),
+        valor_lancamento numeric(17,2) not null,
+        id_lancamento bigint not null,
+        idcategoria bigint,
+        idconta bigint,
+        idpessoa bigint,
+        descricao varchar(255) not null,
+        primary key (id_lancamento)
+    )
+2025-09-05T23:39:07.972-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table perfis (
+        tipo_pessoa integer,
+        pessoa_id bigint not null
+    )
+2025-09-05T23:39:07.975-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table pessoa (
+        data_nascimento date,
+        status smallint check (status between 0 and 1),
+        id bigint not null,
+        cpf varchar(255) unique,
+        email varchar(255) unique,
+        nome varchar(255),
+        num_celular varchar(255),
+        rg varchar(255) unique,
+        senha varchar(255),
+        primary key (id)
+    )
+2025-09-05T23:39:07.983-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table usuario (
+        id bigint not null,
+        primary key (id)
+    )
+2025-09-05T23:39:07.986-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       add constraint FKf9jcp7wlb205vun64i1b8h9mr 
+       foreign key (admin) 
+       references admin
+2025-09-05T23:39:07.989-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       add constraint FKdb9aat2q6biw68ey0bxw40xdh 
+       foreign key (id) 
+       references pessoa
+2025-09-05T23:39:07.993-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists categoria 
+       add constraint FKb2m72y6k9qyv5jsorxidplapa 
+       foreign key (idpessoa) 
+       references pessoa
+2025-09-05T23:39:07.994-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       add constraint FKg3l6o70y1y71mb0qtjtp3sjg8 
+       foreign key (idbanco) 
+       references banco
+2025-09-05T23:39:07.995-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       add constraint FKiq3idx9c3kivqpyljtkvecv63 
+       foreign key (idpessoa) 
+       references pessoa
+2025-09-05T23:39:07.996-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKk3d20uo9e9laou5iqo3lkpjhl 
+       foreign key (idcategoria) 
+       references categoria
+2025-09-05T23:39:07.997-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKjmv848bg85lfj5xokjduk8vt6 
+       foreign key (idconta) 
+       references conta_bancaria
+2025-09-05T23:39:07.998-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKbvn9jc4iu3egtmn9ydv8vuv06 
+       foreign key (idpessoa) 
+       references pessoa
+2025-09-05T23:39:07.999-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FK15jfs4y5v5hy9ys6o0gqu99uj 
+       foreign key (id_lancamento) 
+       references lancamento
+2025-09-05T23:39:07.999-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       add constraint FKlnesgnyiynjyqx8ks8cyhv6il 
+       foreign key (pessoa_id) 
+       references pessoa
+2025-09-05T23:39:08.000-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists usuario 
+       add constraint FKnndxavgf8rogrx6jdmxbgm6s3 
+       foreign key (id) 
+       references pessoa
+2025-09-05T23:39:08.003-03:00  INFO 23096 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-05T23:39:08.373-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_banco')
+2025-09-05T23:39:08.429-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, status, id_banco) 
+    values
+        (?, ?, ?)
+2025-09-05T23:39:08.439-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_banco')
+2025-09-05T23:39:08.440-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, status, id_banco) 
+    values
+        (?, ?, ?)
+2025-09-05T23:39:08.557-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:39:08.561-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:39:08.563-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        admin
+        (admin, id) 
+    values
+        (?, ?)
+2025-09-05T23:39:08.566-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:39:08.568-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:39:08.568-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:39:08.569-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        admin
+        (admin, id) 
+    values
+        (?, ?)
+2025-09-05T23:39:08.569-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:39:08.678-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:39:08.679-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:39:08.680-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (id) 
+    values
+        (?)
+2025-09-05T23:39:08.681-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:39:08.683-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:39:08.683-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:39:08.684-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (id) 
+    values
+        (?)
+2025-09-05T23:39:08.684-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:39:08.686-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_contabancaria')
+2025-09-05T23:39:08.688-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:39:08.691-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_contabancaria')
+2025-09-05T23:39:08.692-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:39:08.694-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:39:08.695-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:39:08.697-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:39:08.698-03:00 DEBUG 23096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_lancamento')
+2025-09-05T23:39:08.705-03:00  WARN 23096 --- [Finangen] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'devConfig': Invocation of init method failed
+2025-09-05T23:39:08.705-03:00  INFO 23096 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-05T23:39:08.708-03:00  INFO 23096 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-05T23:39:08.711-03:00  INFO 23096 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-05T23:39:08.715-03:00  INFO 23096 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-05T23:39:08.725-03:00  INFO 23096 --- [Finangen] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-05T23:39:08.739-03:00 ERROR 23096 --- [Finangen] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'devConfig': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.finangen.Finangen.FinangenApplication.main(FinangenApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.5.jar:3.3.5]
+Caused by: org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : com.finangen.domains.Lancamento.categoria -> com.finangen.domains.Categoria
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:368) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566) ~[spring-orm-6.1.14.jar:6.1.14]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.1.14.jar:6.1.14]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.1.14.jar:6.1.14]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:663) ~[spring-tx-6.1.14.jar:6.1.14]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:413) ~[spring-tx-6.1.14.jar:6.1.14]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.14.jar:6.1.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.14.jar:6.1.14]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.1.14.jar:6.1.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.14.jar:6.1.14]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.3.5.jar:3.3.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.14.jar:6.1.14]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.14.jar:6.1.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.14.jar:6.1.14]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.1.14.jar:6.1.14]
+	at jdk.proxy4/jdk.proxy4.$Proxy160.save(Unknown Source) ~[na:na]
+	at com.finangen.services.DBService.initDB(DBService.java:86) ~[classes/:na]
+	at com.finangen.config.DevConfig.initDB(DevConfig.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.1.14.jar:6.1.14]
+	... 23 common frames omitted
+Caused by: java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : com.finangen.domains.Lancamento.categoria -> com.finangen.domains.Categoria
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:167) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:173) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1429) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-6.1.14.jar:6.1.14]
+	... 46 common frames omitted
+Caused by: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : com.finangen.domains.Lancamento.categoria -> com.finangen.domains.Categoria
+	at org.hibernate.engine.spi.CascadingActions$8.noCascade(CascadingActions.java:372) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:180) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:172) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:155) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.preFlush(AbstractFlushingEventListener.java:105) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:80) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	... 54 common frames omitted
+
+2025-09-05T23:42:03.165-03:00  INFO 10688 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.13 with PID 10688 (C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen\target\classes started by ARTHUR in C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen)
+2025-09-05T23:42:03.167-03:00  INFO 10688 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "dev"
+2025-09-05T23:42:03.206-03:00  INFO 10688 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-05T23:42:03.206-03:00  INFO 10688 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-05T23:42:03.672-03:00  INFO 10688 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-05T23:42:03.718-03:00  INFO 10688 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 7 JPA repository interfaces.
+2025-09-05T23:42:04.360-03:00  INFO 10688 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-05T23:42:04.370-03:00  INFO 10688 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-05T23:42:04.371-03:00  INFO 10688 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-05T23:42:04.418-03:00  INFO 10688 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-05T23:42:04.419-03:00  INFO 10688 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1213 ms
+2025-09-05T23:42:04.442-03:00  INFO 10688 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-05T23:42:04.593-03:00  INFO 10688 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@dca49c1
+2025-09-05T23:42:04.594-03:00  INFO 10688 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-05T23:42:04.603-03:00  INFO 10688 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bd_finangen'
+2025-09-05T23:42:04.686-03:00  INFO 10688 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-05T23:42:04.731-03:00  INFO 10688 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-05T23:42:04.758-03:00  INFO 10688 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-05T23:42:04.999-03:00  INFO 10688 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-05T23:42:05.812-03:00  INFO 10688 --- [Finangen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-05T23:42:05.823-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       drop constraint if exists FKf9jcp7wlb205vun64i1b8h9mr
+2025-09-05T23:42:05.825-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       drop constraint if exists FKdb9aat2q6biw68ey0bxw40xdh
+2025-09-05T23:42:05.825-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists categoria 
+       drop constraint if exists FKb2m72y6k9qyv5jsorxidplapa
+2025-09-05T23:42:05.826-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       drop constraint if exists FKg3l6o70y1y71mb0qtjtp3sjg8
+2025-09-05T23:42:05.826-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       drop constraint if exists FKiq3idx9c3kivqpyljtkvecv63
+2025-09-05T23:42:05.827-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FKk3d20uo9e9laou5iqo3lkpjhl
+2025-09-05T23:42:05.827-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FKjmv848bg85lfj5xokjduk8vt6
+2025-09-05T23:42:05.828-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FKbvn9jc4iu3egtmn9ydv8vuv06
+2025-09-05T23:42:05.828-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FK15jfs4y5v5hy9ys6o0gqu99uj
+2025-09-05T23:42:05.829-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       drop constraint if exists FKlnesgnyiynjyqx8ks8cyhv6il
+2025-09-05T23:42:05.829-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists usuario 
+       drop constraint if exists FKnndxavgf8rogrx6jdmxbgm6s3
+2025-09-05T23:42:05.830-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists admin cascade
+2025-09-05T23:42:05.833-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists banco cascade
+2025-09-05T23:42:05.835-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists categoria cascade
+2025-09-05T23:42:05.836-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists conta_bancaria cascade
+2025-09-05T23:42:05.839-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists lancamento cascade
+2025-09-05T23:42:05.840-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade
+2025-09-05T23:42:05.841-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pessoa cascade
+2025-09-05T23:42:05.847-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists usuario cascade
+2025-09-05T23:42:05.848-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_banco
+2025-09-05T23:42:05.850-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_categoria
+2025-09-05T23:42:05.851-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_contabancaria
+2025-09-05T23:42:05.851-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_lancamento
+2025-09-05T23:42:05.852-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pessoa
+2025-09-05T23:42:05.857-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_banco start with 1 increment by 50
+2025-09-05T23:42:05.860-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_categoria start with 1 increment by 50
+2025-09-05T23:42:05.860-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_contabancaria start with 1 increment by 50
+2025-09-05T23:42:05.861-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_lancamento start with 1 increment by 50
+2025-09-05T23:42:05.862-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pessoa start with 1 increment by 1
+2025-09-05T23:42:05.864-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table admin (
+        admin bigint,
+        id bigint not null,
+        primary key (id)
+    )
+2025-09-05T23:42:05.868-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table banco (
+        status smallint check (status between 0 and 1),
+        id_banco bigint not null,
+        razao_social varchar(255) not null,
+        primary key (id_banco)
+    )
+2025-09-05T23:42:05.871-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table categoria (
+        id_categoria bigint not null,
+        idpessoa bigint,
+        descricao_categoria varchar(255) not null,
+        primary key (id_categoria)
+    )
+2025-09-05T23:42:05.873-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table conta_bancaria (
+        saldo_conta numeric(17,2) not null,
+        tipo_conta smallint check (tipo_conta between 0 and 4),
+        id_conta bigint not null,
+        idbanco bigint,
+        idpessoa bigint,
+        agencia_conta varchar(255) not null,
+        descricao_conta varchar(255) not null,
+        limite_conta varchar(255) not null,
+        numero_conta varchar(255) not null,
+        primary key (id_conta)
+    )
+2025-09-05T23:42:05.877-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table lancamento (
+        data_baixa date,
+        data_lancamento date,
+        data_vencimento date,
+        situacao smallint check (situacao between 0 and 2),
+        tipo_lancamento smallint check (tipo_lancamento between 0 and 1),
+        valor_lancamento numeric(17,2) not null,
+        id_lancamento bigint not null,
+        idcategoria bigint,
+        idconta bigint,
+        idpessoa bigint,
+        descricao varchar(255) not null,
+        primary key (id_lancamento)
+    )
+2025-09-05T23:42:05.879-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table perfis (
+        tipo_pessoa integer,
+        pessoa_id bigint not null
+    )
+2025-09-05T23:42:05.880-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table pessoa (
+        data_nascimento date,
+        status smallint check (status between 0 and 1),
+        id bigint not null,
+        cpf varchar(255) unique,
+        email varchar(255) unique,
+        nome varchar(255),
+        num_celular varchar(255),
+        rg varchar(255) unique,
+        senha varchar(255),
+        primary key (id)
+    )
+2025-09-05T23:42:05.888-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table usuario (
+        id bigint not null,
+        primary key (id)
+    )
+2025-09-05T23:42:05.890-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       add constraint FKf9jcp7wlb205vun64i1b8h9mr 
+       foreign key (admin) 
+       references admin
+2025-09-05T23:42:05.892-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       add constraint FKdb9aat2q6biw68ey0bxw40xdh 
+       foreign key (id) 
+       references pessoa
+2025-09-05T23:42:05.893-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists categoria 
+       add constraint FKb2m72y6k9qyv5jsorxidplapa 
+       foreign key (idpessoa) 
+       references pessoa
+2025-09-05T23:42:05.895-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       add constraint FKg3l6o70y1y71mb0qtjtp3sjg8 
+       foreign key (idbanco) 
+       references banco
+2025-09-05T23:42:05.896-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       add constraint FKiq3idx9c3kivqpyljtkvecv63 
+       foreign key (idpessoa) 
+       references pessoa
+2025-09-05T23:42:05.897-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKk3d20uo9e9laou5iqo3lkpjhl 
+       foreign key (idcategoria) 
+       references categoria
+2025-09-05T23:42:05.898-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKjmv848bg85lfj5xokjduk8vt6 
+       foreign key (idconta) 
+       references conta_bancaria
+2025-09-05T23:42:05.899-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKbvn9jc4iu3egtmn9ydv8vuv06 
+       foreign key (idpessoa) 
+       references pessoa
+2025-09-05T23:42:05.899-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FK15jfs4y5v5hy9ys6o0gqu99uj 
+       foreign key (id_lancamento) 
+       references lancamento
+2025-09-05T23:42:05.900-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       add constraint FKlnesgnyiynjyqx8ks8cyhv6il 
+       foreign key (pessoa_id) 
+       references pessoa
+2025-09-05T23:42:05.901-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists usuario 
+       add constraint FKnndxavgf8rogrx6jdmxbgm6s3 
+       foreign key (id) 
+       references pessoa
+2025-09-05T23:42:05.903-03:00  INFO 10688 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-05T23:42:06.192-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_banco')
+2025-09-05T23:42:06.230-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, status, id_banco) 
+    values
+        (?, ?, ?)
+2025-09-05T23:42:06.237-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_banco')
+2025-09-05T23:42:06.238-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, status, id_banco) 
+    values
+        (?, ?, ?)
+2025-09-05T23:42:06.355-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:42:06.358-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.360-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (id) 
+    values
+        (?)
+2025-09-05T23:42:06.362-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:42:06.365-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:42:06.366-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.366-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (id) 
+    values
+        (?)
+2025-09-05T23:42:06.367-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:42:06.469-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:42:06.471-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.471-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        admin
+        (admin, id) 
+    values
+        (?, ?)
+2025-09-05T23:42:06.473-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:42:06.474-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:42:06.475-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.475-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        admin
+        (admin, id) 
+    values
+        (?, ?)
+2025-09-05T23:42:06.476-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:42:06.477-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_contabancaria')
+2025-09-05T23:42:06.479-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.480-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_contabancaria')
+2025-09-05T23:42:06.481-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.482-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.484-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.485-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.486-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_categoria')
+2025-09-05T23:42:06.487-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        categoria
+        (descricao_categoria, idpessoa, id_categoria) 
+    values
+        (?, ?, ?)
+2025-09-05T23:42:06.488-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_categoria')
+2025-09-05T23:42:06.490-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        categoria
+        (descricao_categoria, idpessoa, id_categoria) 
+    values
+        (?, ?, ?)
+2025-09-05T23:42:06.491-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_lancamento')
+2025-09-05T23:42:06.491-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcategoria, idconta, data_baixa, data_lancamento, data_vencimento, descricao, idpessoa, situacao, tipo_lancamento, valor_lancamento, id_lancamento) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.493-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_lancamento')
+2025-09-05T23:42:06.494-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcategoria, idconta, data_baixa, data_lancamento, data_vencimento, descricao, idpessoa, situacao, tipo_lancamento, valor_lancamento, id_lancamento) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.496-03:00 DEBUG 10688 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcategoria, idconta, data_baixa, data_lancamento, data_vencimento, descricao, idpessoa, situacao, tipo_lancamento, valor_lancamento, id_lancamento) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:42:06.501-03:00  WARN 10688 --- [Finangen] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminResource': Unsatisfied dependency expressed through field 'adminService': No qualifying bean of type 'com.finangen.services.AdminService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-09-05T23:42:06.501-03:00  INFO 10688 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-05T23:42:06.503-03:00  INFO 10688 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-05T23:42:06.506-03:00  INFO 10688 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-05T23:42:06.508-03:00  INFO 10688 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-05T23:42:06.516-03:00  INFO 10688 --- [Finangen] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-05T23:42:06.532-03:00 ERROR 10688 --- [Finangen] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field adminService in com.finangen.resources.AdminResource required a bean of type 'com.finangen.services.AdminService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.finangen.services.AdminService' in your configuration.
+
+2025-09-05T23:47:18.587-03:00  INFO 18096 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.13 with PID 18096 (C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen\target\classes started by ARTHUR in C:\Users\ARTHUR\Desktop\Faculdade\PROJETOS JEFFERSON\Finangen)
+2025-09-05T23:47:18.589-03:00  INFO 18096 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "dev"
+2025-09-05T23:47:18.627-03:00  INFO 18096 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-05T23:47:18.627-03:00  INFO 18096 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-05T23:47:19.081-03:00  INFO 18096 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-05T23:47:19.126-03:00  INFO 18096 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 7 JPA repository interfaces.
+2025-09-05T23:47:19.769-03:00  INFO 18096 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-05T23:47:19.780-03:00  INFO 18096 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-05T23:47:19.781-03:00  INFO 18096 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-05T23:47:19.829-03:00  INFO 18096 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-05T23:47:19.829-03:00  INFO 18096 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1201 ms
+2025-09-05T23:47:19.851-03:00  INFO 18096 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-05T23:47:20.004-03:00  INFO 18096 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@14ecec36
+2025-09-05T23:47:20.006-03:00  INFO 18096 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-05T23:47:20.016-03:00  INFO 18096 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/bd_finangen'
+2025-09-05T23:47:20.103-03:00  INFO 18096 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-05T23:47:20.149-03:00  INFO 18096 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-05T23:47:20.176-03:00  INFO 18096 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-05T23:47:20.417-03:00  INFO 18096 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-05T23:47:21.303-03:00  INFO 18096 --- [Finangen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-05T23:47:21.314-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       drop constraint if exists FKf9jcp7wlb205vun64i1b8h9mr
+2025-09-05T23:47:21.316-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       drop constraint if exists FKdb9aat2q6biw68ey0bxw40xdh
+2025-09-05T23:47:21.318-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists categoria 
+       drop constraint if exists FKb2m72y6k9qyv5jsorxidplapa
+2025-09-05T23:47:21.318-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       drop constraint if exists FKg3l6o70y1y71mb0qtjtp3sjg8
+2025-09-05T23:47:21.319-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       drop constraint if exists FKiq3idx9c3kivqpyljtkvecv63
+2025-09-05T23:47:21.319-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FKk3d20uo9e9laou5iqo3lkpjhl
+2025-09-05T23:47:21.320-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FKjmv848bg85lfj5xokjduk8vt6
+2025-09-05T23:47:21.320-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FKbvn9jc4iu3egtmn9ydv8vuv06
+2025-09-05T23:47:21.320-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       drop constraint if exists FK15jfs4y5v5hy9ys6o0gqu99uj
+2025-09-05T23:47:21.321-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       drop constraint if exists FKlnesgnyiynjyqx8ks8cyhv6il
+2025-09-05T23:47:21.321-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists usuario 
+       drop constraint if exists FKnndxavgf8rogrx6jdmxbgm6s3
+2025-09-05T23:47:21.322-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists admin cascade
+2025-09-05T23:47:21.324-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists banco cascade
+2025-09-05T23:47:21.326-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists categoria cascade
+2025-09-05T23:47:21.328-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists conta_bancaria cascade
+2025-09-05T23:47:21.331-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists lancamento cascade
+2025-09-05T23:47:21.333-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade
+2025-09-05T23:47:21.334-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists pessoa cascade
+2025-09-05T23:47:21.338-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists usuario cascade
+2025-09-05T23:47:21.340-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_banco
+2025-09-05T23:47:21.341-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_categoria
+2025-09-05T23:47:21.342-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_contabancaria
+2025-09-05T23:47:21.343-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_lancamento
+2025-09-05T23:47:21.344-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists seq_pessoa
+2025-09-05T23:47:21.348-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_banco start with 1 increment by 50
+2025-09-05T23:47:21.352-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_categoria start with 1 increment by 50
+2025-09-05T23:47:21.353-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_contabancaria start with 1 increment by 50
+2025-09-05T23:47:21.353-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_lancamento start with 1 increment by 50
+2025-09-05T23:47:21.354-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create sequence seq_pessoa start with 1 increment by 1
+2025-09-05T23:47:21.356-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table admin (
+        admin bigint,
+        id bigint not null,
+        primary key (id)
+    )
+2025-09-05T23:47:21.361-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table banco (
+        status smallint check (status between 0 and 1),
+        id_banco bigint not null,
+        razao_social varchar(255) not null,
+        primary key (id_banco)
+    )
+2025-09-05T23:47:21.363-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table categoria (
+        id_categoria bigint not null,
+        idpessoa bigint,
+        descricao_categoria varchar(255) not null,
+        primary key (id_categoria)
+    )
+2025-09-05T23:47:21.365-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table conta_bancaria (
+        saldo_conta numeric(17,2) not null,
+        tipo_conta smallint check (tipo_conta between 0 and 4),
+        id_conta bigint not null,
+        idbanco bigint,
+        idpessoa bigint,
+        agencia_conta varchar(255) not null,
+        descricao_conta varchar(255) not null,
+        limite_conta varchar(255) not null,
+        numero_conta varchar(255) not null,
+        primary key (id_conta)
+    )
+2025-09-05T23:47:21.370-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table lancamento (
+        data_baixa date,
+        data_lancamento date,
+        data_vencimento date,
+        situacao smallint check (situacao between 0 and 2),
+        tipo_lancamento smallint check (tipo_lancamento between 0 and 1),
+        valor_lancamento numeric(17,2) not null,
+        id_lancamento bigint not null,
+        idcategoria bigint,
+        idconta bigint,
+        idpessoa bigint,
+        descricao varchar(255) not null,
+        primary key (id_lancamento)
+    )
+2025-09-05T23:47:21.372-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table perfis (
+        tipo_pessoa integer,
+        pessoa_id bigint not null
+    )
+2025-09-05T23:47:21.373-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table pessoa (
+        data_nascimento date,
+        status smallint check (status between 0 and 1),
+        id bigint not null,
+        cpf varchar(255) unique,
+        email varchar(255) unique,
+        nome varchar(255),
+        num_celular varchar(255),
+        rg varchar(255) unique,
+        senha varchar(255),
+        primary key (id)
+    )
+2025-09-05T23:47:21.381-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    create table usuario (
+        id bigint not null,
+        primary key (id)
+    )
+2025-09-05T23:47:21.383-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       add constraint FKf9jcp7wlb205vun64i1b8h9mr 
+       foreign key (admin) 
+       references admin
+2025-09-05T23:47:21.385-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists admin 
+       add constraint FKdb9aat2q6biw68ey0bxw40xdh 
+       foreign key (id) 
+       references pessoa
+2025-09-05T23:47:21.387-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists categoria 
+       add constraint FKb2m72y6k9qyv5jsorxidplapa 
+       foreign key (idpessoa) 
+       references pessoa
+2025-09-05T23:47:21.388-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       add constraint FKg3l6o70y1y71mb0qtjtp3sjg8 
+       foreign key (idbanco) 
+       references banco
+2025-09-05T23:47:21.389-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists conta_bancaria 
+       add constraint FKiq3idx9c3kivqpyljtkvecv63 
+       foreign key (idpessoa) 
+       references pessoa
+2025-09-05T23:47:21.390-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKk3d20uo9e9laou5iqo3lkpjhl 
+       foreign key (idcategoria) 
+       references categoria
+2025-09-05T23:47:21.392-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKjmv848bg85lfj5xokjduk8vt6 
+       foreign key (idconta) 
+       references conta_bancaria
+2025-09-05T23:47:21.393-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FKbvn9jc4iu3egtmn9ydv8vuv06 
+       foreign key (idpessoa) 
+       references pessoa
+2025-09-05T23:47:21.394-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists lancamento 
+       add constraint FK15jfs4y5v5hy9ys6o0gqu99uj 
+       foreign key (id_lancamento) 
+       references lancamento
+2025-09-05T23:47:21.397-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       add constraint FKlnesgnyiynjyqx8ks8cyhv6il 
+       foreign key (pessoa_id) 
+       references pessoa
+2025-09-05T23:47:21.398-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists usuario 
+       add constraint FKnndxavgf8rogrx6jdmxbgm6s3 
+       foreign key (id) 
+       references pessoa
+2025-09-05T23:47:21.400-03:00  INFO 18096 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-05T23:47:21.681-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_banco')
+2025-09-05T23:47:21.720-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, status, id_banco) 
+    values
+        (?, ?, ?)
+2025-09-05T23:47:21.728-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_banco')
+2025-09-05T23:47:21.729-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        banco
+        (razao_social, status, id_banco) 
+    values
+        (?, ?, ?)
+2025-09-05T23:47:21.843-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:47:21.846-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.849-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (id) 
+    values
+        (?)
+2025-09-05T23:47:21.851-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:47:21.852-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:47:21.852-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.853-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        usuario
+        (id) 
+    values
+        (?)
+2025-09-05T23:47:21.853-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:47:21.956-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:47:21.958-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.958-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        admin
+        (admin, id) 
+    values
+        (?, ?)
+2025-09-05T23:47:21.959-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:47:21.960-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_pessoa')
+2025-09-05T23:47:21.962-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        pessoa
+        (cpf, data_nascimento, email, nome, num_celular, rg, senha, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.962-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        admin
+        (admin, id) 
+    values
+        (?, ?)
+2025-09-05T23:47:21.963-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (pessoa_id, tipo_pessoa) 
+    values
+        (?, ?)
+2025-09-05T23:47:21.964-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_contabancaria')
+2025-09-05T23:47:21.965-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.968-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_contabancaria')
+2025-09-05T23:47:21.968-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.969-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.970-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.972-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        conta_bancaria
+        (agencia_conta, idbanco, descricao_conta, limite_conta, numero_conta, idpessoa, saldo_conta, tipo_conta, id_conta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.973-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_categoria')
+2025-09-05T23:47:21.973-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        categoria
+        (descricao_categoria, idpessoa, id_categoria) 
+    values
+        (?, ?, ?)
+2025-09-05T23:47:21.974-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_categoria')
+2025-09-05T23:47:21.974-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        categoria
+        (descricao_categoria, idpessoa, id_categoria) 
+    values
+        (?, ?, ?)
+2025-09-05T23:47:21.975-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_lancamento')
+2025-09-05T23:47:21.977-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcategoria, idconta, data_baixa, data_lancamento, data_vencimento, descricao, idpessoa, situacao, tipo_lancamento, valor_lancamento, id_lancamento) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.978-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    select
+        nextval('seq_lancamento')
+2025-09-05T23:47:21.978-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcategoria, idconta, data_baixa, data_lancamento, data_vencimento, descricao, idpessoa, situacao, tipo_lancamento, valor_lancamento, id_lancamento) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:21.980-03:00 DEBUG 18096 --- [Finangen] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        lancamento
+        (idcategoria, idconta, data_baixa, data_lancamento, data_vencimento, descricao, idpessoa, situacao, tipo_lancamento, valor_lancamento, id_lancamento) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-05T23:47:22.060-03:00  WARN 18096 --- [Finangen] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-05T23:47:22.082-03:00  INFO 18096 --- [Finangen] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-09-05T23:47:22.486-03:00  INFO 18096 --- [Finangen] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-05T23:47:22.508-03:00  INFO 18096 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-05T23:47:22.515-03:00  INFO 18096 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Started FinangenApplication in 4.232 seconds (process running for 4.574)
+2025-09-05T23:47:30.194-03:00  INFO 18096 --- [Finangen] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-05T23:47:30.197-03:00  INFO 18096 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-05T23:47:30.198-03:00  INFO 18096 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
