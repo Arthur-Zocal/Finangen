@@ -23,9 +23,9 @@ public class BancoService {
                 .collect(Collectors.toList());
     }
 
-    public Banco findById(Long id){
-        Optional<Banco> obj = bancoRepo.findById(id);
-        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, ID:"+id));
+    public Banco findByIdBanco(Long idBanco){
+        Optional<Banco> obj = bancoRepo.findByIdBanco(idBanco);
+        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, ID:"+idBanco));
     }
 
     public Banco findByRazaoSocial(String razaoSocial) {
@@ -40,20 +40,20 @@ public class BancoService {
         return bancoRepo.save(newObj);
     }
 
-    public Banco update(Long id, BancoDTO objDto){
-        objDto.setIdBanco(id);
-        Banco oldObj = findById(id);
+    public Banco update(Long idBanco, BancoDTO objDto){
+        objDto.setIdBanco(idBanco);
+        Banco oldObj = findByIdBanco(idBanco);
         ValidaBanco(objDto);
         oldObj = new Banco(objDto);
         return bancoRepo.save(oldObj);
     }
 
-    public void delete(Long id) {
-        Banco obj = findById(id);
+    public void delete(Long idBanco) {
+        Banco obj = findByIdBanco(idBanco);
         if (obj.getContaBancarias().size() > 0) {
             throw new DataIntegrityViolationException("Banco não pode ser deletado pois possui cadastrados ativos");
         }
-        bancoRepo.deleteById(id);
+        bancoRepo.deleteById(idBanco);
     }
 
 

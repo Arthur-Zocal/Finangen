@@ -24,12 +24,12 @@ public class LancamentoService {
     public List<LancamentoDTO> findAll(){
         return lancamentoRepo.findAll().stream()
                 .map(obj -> new LancamentoDTO(obj))
-                        .collect(Collectors.toList());
+                .collect(Collectors.toList());
     }
 
-    public Lancamento findById(Long id){
-        Optional<Lancamento> obj = lancamentoRepo.findById(id);
-        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, ID: " + id));
+    public Lancamento findByIdLancamento(Long idLancamento){
+        Optional<Lancamento> obj = lancamentoRepo.findByIdLancamento(idLancamento);
+        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, ID: " + idLancamento));
     }
 
     public Lancamento create(LancamentoDTO objDto){
@@ -38,15 +38,15 @@ public class LancamentoService {
         return lancamentoRepo.save(newObj);
     }
 
-    public Lancamento update(Long id, LancamentoDTO objDto){
-        objDto.setIdLancamento(id);
-        Lancamento oldObj = findById(id);
+    public Lancamento update(Long idLancamento, LancamentoDTO objDto){
+        objDto.setIdLancamento(idLancamento);
+        Lancamento oldObj = findByIdLancamento(idLancamento);
         oldObj = new Lancamento(objDto);
         return lancamentoRepo.save(oldObj);
     }
 
-    public void delete(Long id){
-        lancamentoRepo.deleteById(id);
+    public void delete(Long idLancamento){
+        lancamentoRepo.deleteById(idLancamento);
     }
 
 }

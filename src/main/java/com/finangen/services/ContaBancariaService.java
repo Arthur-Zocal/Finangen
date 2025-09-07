@@ -24,9 +24,9 @@ public class ContaBancariaService {
                 .collect(Collectors.toList());
     }
 
-    public ContaBancaria findById(Long id){
-        Optional<ContaBancaria> obj =  contaBancariaRepo.findById(id);
-        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, ID:" + id));
+    public ContaBancaria findByIdConta(Long idConta){
+        Optional<ContaBancaria> obj =  contaBancariaRepo.findByIdConta(idConta);
+        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, ID:" + idConta));
     }
 
     public ContaBancaria create(ContaBancariaDTO objDto){
@@ -35,19 +35,19 @@ public class ContaBancariaService {
         return contaBancariaRepo.save(newObj);
     }
 
-    public ContaBancaria update(Long id, ContaBancariaDTO objDto){
-        objDto.setIdConta(id);
-        ContaBancaria oldObj = findById(id);
+    public ContaBancaria update(Long idConta, ContaBancariaDTO objDto){
+        objDto.setIdConta(idConta);
+        ContaBancaria oldObj = findByIdConta(idConta);
         oldObj = new ContaBancaria(objDto);
         return contaBancariaRepo.save(oldObj);
     }
 
-   public void delete(Long id) {
-        ContaBancaria obj = findById(id);
+    public void delete(Long idConta) {
+        ContaBancaria obj = findByIdConta(idConta);
         if (obj.getLancamentos().size() > 0) {
             throw new DataIntegrityViolationException("Conta Bancaria não pode ser deletada pois possui cadastrados ativos");
         }
-        contaBancariaRepo.deleteById(id);
+        contaBancariaRepo.deleteById(idConta);
     }
 
 

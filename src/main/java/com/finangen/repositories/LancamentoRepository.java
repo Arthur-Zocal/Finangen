@@ -9,4 +9,5 @@ import java.util.UUID;
 
 @Repository
 public interface LancamentoRepository extends JpaRepository<Lancamento, Long> {
+    Optional<Lancamento> findByIdLancamento(Long idLancamento);
 }

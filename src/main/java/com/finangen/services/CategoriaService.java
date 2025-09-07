@@ -23,9 +23,9 @@ public class CategoriaService {
                 .collect(Collectors.toList());
     }
 
-    public Categoria findById(Long id) {
-        Optional<Categoria> obj = categoriaRepo.findById(id);
-        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, ID: " + id));
+    public Categoria findByIdCategoria(Long idCategoria) {
+        Optional<Categoria> obj = categoriaRepo.findByIdCategoria(idCategoria);
+        return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado, ID: " + idCategoria));
     }
 
     public Categoria create(CategoriaDTO objDto) {
@@ -34,19 +34,19 @@ public class CategoriaService {
         return categoriaRepo.save(newObj);
     }
 
-    public Categoria update(Long id, CategoriaDTO objDto) {
-        objDto.setIdCategoria(id);
-        Categoria oldObj = findById(id);
+    public Categoria update(Long idCategoria, CategoriaDTO objDto) {
+        objDto.setIdCategoria(idCategoria);
+        Categoria oldObj = findByIdCategoria(idCategoria);
         oldObj = new Categoria(objDto);
         return categoriaRepo.save(oldObj);
     }
 
-    public void delete(Long id) {
-        Categoria obj = findById(id);
+    public void delete(Long idCategoria) {
+        Categoria obj = findByIdCategoria(idCategoria);
         if (obj.getLancamentos().size() > 0) {
             throw new DataIntegrityViolationException("Banco não pode ser deletado pois possui cadastrados ativos");
         }
-        categoriaRepo.deleteById(id);
+        categoriaRepo.deleteById(idCategoria);
     }
 
 }
