@@ -36,7 +36,7 @@ public class LancamentoResource {
     @Operation(summary = "Buscar um Lancamento pelo ID",
             description = "Realiza busca de um Lancamento pelo ID")
     public ResponseEntity<LancamentoDTO> findByCpf(@PathVariable Long idLancamento){
-        Lancamento obj = this.lancamentoService.findByIdLancamento(idLancamento);
+        Lancamento obj = this.lancamentoService.findById(idLancamento);
         return ResponseEntity.ok().body(new LancamentoDTO(obj));
     }
 
