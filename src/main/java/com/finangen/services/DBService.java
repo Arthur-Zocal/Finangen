@@ -47,10 +47,10 @@ public class DBService {
         bancoRepo.save(banco2);
 
         //  Usuario
-        Usuario usuario1 = new Usuario(null,"João Mamão","00.000.000-3","000.000.000-3","(00)00000 0003","joaomamao@gmail.com",
+        Usuario usuario1 = new Usuario(null,"João Mamão","00.000.000-3","000.000.000-3","(00)00000 0003","felipezocal@gmail.com",
                 encoder.encode("003"),Status.ATIVO);
 
-        Usuario usuario2 = new Usuario(null,"Italo Parachoque","00.000.000-4","000.000.000-4","(00)00000 0004","italoparachoque@gmail.com",
+        Usuario usuario2 = new Usuario(null,"Italo Parachoque","00.000.000-4","000.000.000-4","(00)00000 0004","arthurzocal@gmail.com",
                 encoder.encode("004"),Status.INATIVO);
 
         usuarioRepo.save(usuario1);

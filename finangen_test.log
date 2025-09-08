@@ -79,3 +79,170 @@ Action:
 
 Consider defining a bean of type 'com.finangen.services.AdminService' in your configuration.
 
+2025-09-08T09:51:40.222-03:00  INFO 19796 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.12 with PID 19796 (E:\Projetos2025\Finangen\target\classes started by FELIPE in E:\Projetos2025\Finangen)
+2025-09-08T09:51:40.227-03:00  INFO 19796 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "test"
+2025-09-08T09:51:40.340-03:00  INFO 19796 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-08T09:51:40.340-03:00  INFO 19796 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-08T09:51:41.575-03:00  INFO 19796 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-08T09:51:41.664-03:00  INFO 19796 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 7 JPA repository interfaces.
+2025-09-08T09:51:43.259-03:00  INFO 19796 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-08T09:51:43.279-03:00  INFO 19796 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-08T09:51:43.279-03:00  INFO 19796 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-08T09:51:43.373-03:00  INFO 19796 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-08T09:51:43.373-03:00  INFO 19796 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3032 ms
+2025-09-08T09:51:43.411-03:00  INFO 19796 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-08T09:51:43.696-03:00  INFO 19796 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bd_finangen user=SA
+2025-09-08T09:51:43.699-03:00  INFO 19796 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-08T09:51:43.711-03:00  INFO 19796 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bd_finangen'
+2025-09-08T09:51:43.927-03:00  INFO 19796 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-08T09:51:44.030-03:00  INFO 19796 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-08T09:51:44.089-03:00  INFO 19796 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-08T09:51:44.564-03:00  INFO 19796 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-08T09:51:46.055-03:00  INFO 19796 --- [Finangen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-08T09:51:46.126-03:00  INFO 19796 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T09:51:47.427-03:00  WARN 19796 --- [Finangen] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-08T09:51:47.489-03:00  INFO 19796 --- [Finangen] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-09-08T09:51:48.325-03:00  INFO 19796 --- [Finangen] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-08T09:51:48.373-03:00  INFO 19796 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-08T09:51:48.385-03:00  INFO 19796 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Started FinangenApplication in 8.823 seconds (process running for 9.898)
+2025-09-08T09:51:53.956-03:00  INFO 19796 --- [Finangen] [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-08T09:51:53.956-03:00  INFO 19796 --- [Finangen] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-08T09:51:53.957-03:00  INFO 19796 --- [Finangen] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-08T09:57:00.906-03:00  INFO 19796 --- [Finangen] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T09:57:00.926-03:00  WARN 19796 --- [Finangen] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2025-09-08T09:57:00.928-03:00  INFO 19796 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-08T09:57:00.931-03:00  INFO 19796 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-08T10:03:30.551-03:00  INFO 5468 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.12 with PID 5468 (E:\Projetos2025\Finangen\target\classes started by FELIPE in E:\Projetos2025\Finangen)
+2025-09-08T10:03:30.553-03:00  INFO 5468 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "test"
+2025-09-08T10:03:30.650-03:00  INFO 5468 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-08T10:03:30.650-03:00  INFO 5468 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-08T10:03:31.845-03:00  INFO 5468 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-08T10:03:31.950-03:00  INFO 5468 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 7 JPA repository interfaces.
+2025-09-08T10:03:33.471-03:00  INFO 5468 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-08T10:03:33.502-03:00  INFO 5468 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-08T10:03:33.502-03:00  INFO 5468 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-08T10:03:33.588-03:00  INFO 5468 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-08T10:03:33.589-03:00  INFO 5468 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2938 ms
+2025-09-08T10:03:33.628-03:00  INFO 5468 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-08T10:03:33.895-03:00  INFO 5468 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bd_finangen user=SA
+2025-09-08T10:03:33.899-03:00  INFO 5468 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-08T10:03:33.912-03:00  INFO 5468 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bd_finangen'
+2025-09-08T10:03:34.144-03:00  INFO 5468 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-08T10:03:34.230-03:00  INFO 5468 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-08T10:03:34.300-03:00  INFO 5468 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-08T10:03:34.769-03:00  INFO 5468 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-08T10:03:36.529-03:00  INFO 5468 --- [Finangen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-08T10:03:36.600-03:00  INFO 5468 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T10:03:37.816-03:00  WARN 5468 --- [Finangen] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-08T10:03:37.887-03:00  INFO 5468 --- [Finangen] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-09-08T10:03:38.731-03:00  INFO 5468 --- [Finangen] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-08T10:03:38.782-03:00  INFO 5468 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-08T10:03:38.794-03:00  INFO 5468 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Started FinangenApplication in 8.822 seconds (process running for 9.439)
+2025-09-08T10:03:44.040-03:00  INFO 5468 --- [Finangen] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-08T10:03:44.040-03:00  INFO 5468 --- [Finangen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-08T10:03:44.041-03:00  INFO 5468 --- [Finangen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-08T10:07:36.020-03:00  INFO 5468 --- [Finangen] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T10:07:36.036-03:00  WARN 5468 --- [Finangen] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2025-09-08T10:07:36.037-03:00  INFO 5468 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-08T10:07:36.039-03:00  INFO 5468 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-08T10:09:59.188-03:00  INFO 9444 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.12 with PID 9444 (E:\Projetos2025\Finangen\target\classes started by FELIPE in E:\Projetos2025\Finangen)
+2025-09-08T10:09:59.193-03:00  INFO 9444 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "test"
+2025-09-08T10:09:59.315-03:00  INFO 9444 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-08T10:09:59.315-03:00  INFO 9444 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-08T10:10:00.599-03:00  INFO 9444 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-08T10:10:00.732-03:00  INFO 9444 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 7 JPA repository interfaces.
+2025-09-08T10:10:02.454-03:00  INFO 9444 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-08T10:10:02.478-03:00  INFO 9444 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-08T10:10:02.479-03:00  INFO 9444 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-08T10:10:02.596-03:00  INFO 9444 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-08T10:10:02.596-03:00  INFO 9444 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3280 ms
+2025-09-08T10:10:02.640-03:00  INFO 9444 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-08T10:10:02.935-03:00  INFO 9444 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bd_finangen user=SA
+2025-09-08T10:10:02.942-03:00  INFO 9444 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-08T10:10:02.958-03:00  INFO 9444 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bd_finangen'
+2025-09-08T10:10:03.195-03:00  INFO 9444 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-08T10:10:03.341-03:00  INFO 9444 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-08T10:10:03.401-03:00  INFO 9444 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-08T10:10:03.923-03:00  INFO 9444 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-08T10:10:05.655-03:00  INFO 9444 --- [Finangen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-08T10:10:05.725-03:00  INFO 9444 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T10:10:07.194-03:00  WARN 9444 --- [Finangen] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-08T10:10:07.272-03:00  INFO 9444 --- [Finangen] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-09-08T10:10:08.223-03:00  INFO 9444 --- [Finangen] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-08T10:10:08.279-03:00  INFO 9444 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-08T10:10:08.293-03:00  INFO 9444 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Started FinangenApplication in 9.783 seconds (process running for 10.412)
+2025-09-08T10:15:09.912-03:00  INFO 9444 --- [Finangen] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-08T10:15:09.913-03:00  INFO 9444 --- [Finangen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-08T10:15:09.915-03:00  INFO 9444 --- [Finangen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-09-08T10:19:17.010-03:00  INFO 9444 --- [Finangen] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T10:19:17.021-03:00  WARN 9444 --- [Finangen] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2025-09-08T10:19:17.021-03:00  INFO 9444 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-08T10:19:17.021-03:00  INFO 9444 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-08T10:38:51.745-03:00  INFO 3900 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.12 with PID 3900 (E:\Projetos2025\Finangen\target\classes started by FELIPE in E:\Projetos2025\Finangen)
+2025-09-08T10:38:51.749-03:00  INFO 3900 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "test"
+2025-09-08T10:38:51.860-03:00  INFO 3900 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-08T10:38:51.860-03:00  INFO 3900 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-08T10:38:53.090-03:00  INFO 3900 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-08T10:38:53.183-03:00  INFO 3900 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 7 JPA repository interfaces.
+2025-09-08T10:38:54.922-03:00  INFO 3900 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-08T10:38:54.944-03:00  INFO 3900 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-08T10:38:54.944-03:00  INFO 3900 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-08T10:38:55.077-03:00  INFO 3900 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-08T10:38:55.078-03:00  INFO 3900 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3216 ms
+2025-09-08T10:38:55.123-03:00  INFO 3900 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-08T10:38:55.410-03:00  INFO 3900 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bd_finangen user=SA
+2025-09-08T10:38:55.413-03:00  INFO 3900 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-08T10:38:55.424-03:00  INFO 3900 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bd_finangen'
+2025-09-08T10:38:55.622-03:00  INFO 3900 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-08T10:38:55.740-03:00  INFO 3900 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-08T10:38:55.810-03:00  INFO 3900 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-08T10:38:56.350-03:00  INFO 3900 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-08T10:38:58.032-03:00  INFO 3900 --- [Finangen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-08T10:38:58.119-03:00  INFO 3900 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T10:38:59.593-03:00  WARN 3900 --- [Finangen] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-08T10:38:59.651-03:00  INFO 3900 --- [Finangen] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-09-08T10:39:00.580-03:00  INFO 3900 --- [Finangen] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-08T10:39:00.637-03:00  INFO 3900 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-08T10:39:00.652-03:00  INFO 3900 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Started FinangenApplication in 9.476 seconds (process running for 10.116)
+2025-09-08T10:39:03.985-03:00  INFO 3900 --- [Finangen] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-08T10:39:03.985-03:00  INFO 3900 --- [Finangen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-08T10:39:03.986-03:00  INFO 3900 --- [Finangen] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-08T10:39:04.100-03:00  WARN 3900 --- [Finangen] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries]
+2025-09-08T10:39:13.080-03:00  WARN 3900 --- [Finangen] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries]
+2025-09-08T10:44:15.514-03:00  INFO 3900 --- [Finangen] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T10:44:15.535-03:00  WARN 3900 --- [Finangen] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2025-09-08T10:44:15.536-03:00  INFO 3900 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-08T10:44:15.539-03:00  INFO 3900 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-08T10:44:25.919-03:00  INFO 22000 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Starting FinangenApplication using Java 17.0.12 with PID 22000 (E:\Projetos2025\Finangen\target\classes started by FELIPE in E:\Projetos2025\Finangen)
+2025-09-08T10:44:25.924-03:00  INFO 22000 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : The following 1 profile is active: "test"
+2025-09-08T10:44:26.015-03:00  INFO 22000 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-08T10:44:26.015-03:00  INFO 22000 --- [Finangen] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-08T10:44:27.099-03:00  INFO 22000 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-08T10:44:27.227-03:00  INFO 22000 --- [Finangen] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 7 JPA repository interfaces.
+2025-09-08T10:44:28.686-03:00  INFO 22000 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-08T10:44:28.711-03:00  INFO 22000 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-08T10:44:28.712-03:00  INFO 22000 --- [Finangen] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2025-09-08T10:44:28.814-03:00  INFO 22000 --- [Finangen] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-08T10:44:28.815-03:00  INFO 22000 --- [Finangen] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2797 ms
+2025-09-08T10:44:28.864-03:00  INFO 22000 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-08T10:44:29.126-03:00  INFO 22000 --- [Finangen] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bd_finangen user=SA
+2025-09-08T10:44:29.131-03:00  INFO 22000 --- [Finangen] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-08T10:44:29.144-03:00  INFO 22000 --- [Finangen] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bd_finangen'
+2025-09-08T10:44:29.362-03:00  INFO 22000 --- [Finangen] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-08T10:44:29.441-03:00  INFO 22000 --- [Finangen] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-08T10:44:29.508-03:00  INFO 22000 --- [Finangen] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-08T10:44:29.928-03:00  INFO 22000 --- [Finangen] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-08T10:44:31.528-03:00  INFO 22000 --- [Finangen] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-08T10:44:31.607-03:00  INFO 22000 --- [Finangen] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T10:44:32.813-03:00  WARN 22000 --- [Finangen] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-08T10:44:32.881-03:00  INFO 22000 --- [Finangen] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-09-08T10:44:33.754-03:00  INFO 22000 --- [Finangen] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-08T10:44:33.808-03:00  INFO 22000 --- [Finangen] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-08T10:44:33.820-03:00  INFO 22000 --- [Finangen] [restartedMain] c.finangen.Finangen.FinangenApplication  : Started FinangenApplication in 8.572 seconds (process running for 9.199)
+2025-09-08T10:44:36.597-03:00  INFO 22000 --- [Finangen] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-08T10:44:36.598-03:00  INFO 22000 --- [Finangen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-08T10:44:36.599-03:00  INFO 22000 --- [Finangen] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-08T10:46:29.319-03:00  INFO 22000 --- [Finangen] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-08T10:46:29.332-03:00  WARN 22000 --- [Finangen] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2025-09-08T10:46:29.332-03:00  INFO 22000 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-08T10:46:29.332-03:00  INFO 22000 --- [Finangen] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
