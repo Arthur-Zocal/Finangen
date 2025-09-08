@@ -19,11 +19,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class LancamentoService {
-    /*
 
-  PRECISA FAZER OS TREM PARA CREDITO(entrou na conta) DEBITO(saiu da conta)
-    E MAIS ALGUNS NEGOCIOS QUE NAO SEI
-*/
     @Autowired
     private LancamentoRepository lancamentoRepo;
 
