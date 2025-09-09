@@ -1,6 +1,5 @@
 package com.finangen.security;
 
-import com.finangen.domains.Admin;
 import com.finangen.domains.Pessoa;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

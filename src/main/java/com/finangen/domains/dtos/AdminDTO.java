@@ -5,7 +5,6 @@ import com.finangen.domains.enums.TipoPessoa;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.br.CPF;
-
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -27,15 +26,15 @@ public class AdminDTO {
     @CPF
     protected String cpf;
 
-    @NotNull(message = "O campo numCelular não pode ser vazio")
+    @NotNull(message = "O campo numCelular não pode ser nulo")
     @NotBlank(message = "O campo numCelular não pode ser vazio")
     protected String numCelular;
 
-    @NotNull(message = "O campo email não pode ser vazio")
+    @NotNull(message = "O campo email não pode ser nulo")
     @NotBlank(message = "O campo email não pode ser vazio")
     protected String email;
 
-    @NotNull(message = "O campo senha não pode ser vazio")
+    @NotNull(message = "O campo senha não pode ser nulo")
     @NotBlank(message = "O campo senha não pode ser vazio")
     protected String senha;
 

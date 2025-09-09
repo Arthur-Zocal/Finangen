@@ -81,6 +81,13 @@ public class ContaBancaria {
         this.limiteConta = dto.getLimiteConta();
         this.saldoConta = dto.getSaldoConta();
         this.tipoConta = TipoConta.toEnum(dto.getTipoConta());
+
+        this.pessoa = new Usuario();
+        this.pessoa.setId(dto.getId());
+
+        this.banco = new Banco();
+        this.banco.setIdBanco(dto.getIdBanco());
+
     }
 
     public Long getIdConta() {

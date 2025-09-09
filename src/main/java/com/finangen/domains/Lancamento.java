@@ -83,7 +83,18 @@ public class Lancamento {
         this.valorLancamento = dto.getValorLancamento();
         this.tipoLancamento = TipoLancamento.toEnum(dto.getTipoLancamento());
         this.situacao = Situacao.toEnum(dto.getSituacao());
+
+        this.pessoa = new Usuario();
+        this.pessoa.setId(dto.getId());
+
+        this.categoria = new Categoria();
+        this.categoria.setIdCategoria(dto.getIdCategoria());
+
+        this.contaBancaria = new ContaBancaria();
+        this.contaBancaria.setIdConta(dto.getIdConta());
+
     }
+
 
     public Long getIdLancamento() {
         return idLancamento;
@@ -175,7 +186,6 @@ public class Lancamento {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Lancamento that = (Lancamento) o;
         return Objects.equals(idLancamento, that.idLancamento);

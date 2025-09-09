@@ -55,16 +55,16 @@ public class LancamentoResource {
     @PutMapping(value="/{idLancamento}")
     @Operation(summary = "Altera um Lancamento",
             description = "Altera um Lancamento existente")
-    public ResponseEntity<LancamentoDTO> update(@PathVariable Long id, @Valid @RequestBody LancamentoDTO objDto){
-        Lancamento Obj = lancamentoService.update(id, objDto);
+    public ResponseEntity<LancamentoDTO> update(@PathVariable Long idLancamento, @Valid @RequestBody LancamentoDTO objDto){
+        Lancamento Obj = lancamentoService.update(idLancamento, objDto);
         return ResponseEntity.ok().body(new LancamentoDTO(Obj));
     }
 
     @DeleteMapping(value="/{idLancamento}")
     @Operation(summary = "Deleta um Lancamento",
             description = "Deleta um Lancamento a partir do seu ID")
-    public ResponseEntity<LancamentoDTO> delete(@PathVariable Long id){
-        lancamentoService.delete(id);
+    public ResponseEntity<LancamentoDTO> delete(@PathVariable Long idLancamento){
+        lancamentoService.delete(idLancamento);
         return ResponseEntity.noContent().build();
     }
 

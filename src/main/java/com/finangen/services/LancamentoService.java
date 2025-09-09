@@ -55,7 +55,7 @@ public class LancamentoService {
         lancamentoRepo.deleteById(id);
     }
 
-    @Autowired
+   @Autowired
     public LancamentoService(ContaBancariaRepository contaBancariaRepository,
                              LancamentoRepository lancamentoRepository) {
         this.contaBancariaRepo = contaBancariaRepository;

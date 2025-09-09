@@ -1,8 +1,6 @@
 package com.finangen.resources;
 
-import com.finangen.domains.Lancamento;
 import com.finangen.domains.Usuario;
-import com.finangen.domains.dtos.LancamentoDTO;
 import com.finangen.domains.dtos.UsuarioDTO;
 import com.finangen.services.UsuarioService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -38,7 +36,6 @@ public class UsuarioResource {
         Usuario obj = this.usuarioService.findById(id);
         return ResponseEntity.ok().body(new UsuarioDTO(obj));
     }
-
 
     @GetMapping(value="/cpf/{cpf}")
     @Operation(summary = "Buscar um Usuario pelo CPF",

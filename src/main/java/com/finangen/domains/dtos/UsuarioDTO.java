@@ -19,12 +19,14 @@ public class UsuarioDTO {
     protected String nome;
 
     @NotNull(message = "O campo RG não pode ser nulo")
+    @NotBlank(message = "O campo rg não pode ser vazio")
     protected String rg;
 
     @NotNull(message = "O campo CPF não pode ser nulo!")
     @CPF
     protected String cpf;
 
+    @NotNull(message = "O campo numCelular não pode ser nulo")
     @NotBlank(message = "O campo numCelular não pode estar vazio!")
     protected String numCelular;
 

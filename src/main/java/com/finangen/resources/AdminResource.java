@@ -1,10 +1,7 @@
 package com.finangen.resources;
 
-
 import com.finangen.domains.Admin;
-import com.finangen.domains.Categoria;
 import com.finangen.domains.dtos.AdminDTO;
-import com.finangen.domains.dtos.CategoriaDTO;
 import com.finangen.services.AdminService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -16,7 +13,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
-
 
 @RestController
 @RequestMapping(value = "/admin")
@@ -61,9 +57,9 @@ public class AdminResource {
     @Operation(summary = "Cria um novo Admin",
             description = "Cria um novo Admin com base nos dados fornecidos")
     public ResponseEntity<AdminDTO> create(@Valid @RequestBody AdminDTO dto){
-        Admin usuario = adminService.create(dto);
+        Admin admin = adminService.create(dto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-                .buildAndExpand(usuario.getId()).toUri();
+                .buildAndExpand(admin.getId()).toUri();
         return ResponseEntity.created(uri).build();
     }
 
