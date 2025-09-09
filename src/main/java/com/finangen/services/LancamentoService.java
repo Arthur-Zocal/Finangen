@@ -62,8 +62,8 @@ public class LancamentoService {
         this.lancamentoRepo = lancamentoRepository;
     }
 
-    public Lancamento creditar(Long contaId, BigDecimal valor, String descricao) {
-        ContaBancaria conta = contaBancariaRepo.findById(contaId)
+    public Lancamento creditar(Long idConta, BigDecimal valor, String descricao) {
+        ContaBancaria conta = contaBancariaRepo.findById(idConta)
                 .orElseThrow(() -> new RuntimeException("Conta não encontrada"));
 
         conta.setSaldoConta(conta.getSaldoConta().add(valor));
@@ -79,8 +79,8 @@ public class LancamentoService {
         return lancamentoRepo.save(lancamento);
     }
 
-    public Lancamento debitar(Long contaId, BigDecimal valor, String descricao) {
-        ContaBancaria conta = contaBancariaRepo.findById(contaId)
+    public Lancamento debitar(Long idConta, BigDecimal valor, String descricao) {
+        ContaBancaria conta = contaBancariaRepo.findById(idConta)
                 .orElseThrow(() -> new RuntimeException("Conta não encontrada"));
 
         if (conta.getSaldoConta().compareTo(valor) < 0) {
