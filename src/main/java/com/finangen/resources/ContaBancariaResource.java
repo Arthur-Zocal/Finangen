@@ -47,15 +47,15 @@ public class ContaBancariaResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping
+    @PutMapping(value="/idConta/{idConta}")
     @Operation(summary = "Altera um Conta Bancaria",
             description = "Altera um Conta Bancaria existente")
-    public ResponseEntity<ContaBancariaDTO> udpate(@PathVariable Long id, @Valid @RequestBody ContaBancariaDTO objDto){
+    public ResponseEntity<ContaBancariaDTO> update(@PathVariable Long id, @Valid @RequestBody ContaBancariaDTO objDto){
         ContaBancaria Obj = contaBancariaService.update(id, objDto);
         return ResponseEntity.ok().body(new ContaBancariaDTO(Obj));
     }
 
-    @DeleteMapping
+    @DeleteMapping(value="/idConta/{idConta}")
     @Operation(summary = "Deleta um Conta Bancaria",
             description = "Deleta um Conta Bancaria a partir do seu ID")
     public ResponseEntity<ContaBancariaDTO> delete(@PathVariable Long id){

@@ -2,7 +2,9 @@ package com.finangen.resources;
 
 
 import com.finangen.domains.Admin;
+import com.finangen.domains.Categoria;
 import com.finangen.domains.dtos.AdminDTO;
+import com.finangen.domains.dtos.CategoriaDTO;
 import com.finangen.services.AdminService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -31,6 +33,14 @@ public class AdminResource {
         return ResponseEntity.ok().body(adminService.findAll());
     }
 
+    @GetMapping(value="{id}")
+    @Operation(summary = "Buscar uma Categoria pelo ID",
+            description = "Realiza busca de uma Categoria pelo ID")
+    public ResponseEntity<AdminDTO> findById(@PathVariable Long id){
+        Admin obj = this.adminService.findById(id);
+        return ResponseEntity.ok().body(new AdminDTO(obj));
+    }
+
     @GetMapping(value="/cpf/{cpf}")
     @Operation(summary = "Buscar um Admin pelo CPF",
             description = "Realiza busca de um Admin pelo CPF")
@@ -57,15 +67,15 @@ public class AdminResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping
+    @PutMapping(value="/id/{id}")
     @Operation(summary = "Altera um Admin",
             description = "Altera um Admin existente")
-    public ResponseEntity<AdminDTO> udpate(@PathVariable Long id, @Valid @RequestBody AdminDTO objDto){
+    public ResponseEntity<AdminDTO> update(@PathVariable Long id, @Valid @RequestBody AdminDTO objDto){
         Admin Obj = adminService.update(id, objDto);
         return ResponseEntity.ok().body(new AdminDTO(Obj));
     }
 
-    @DeleteMapping
+    @DeleteMapping(value="/id/{id}")
     @Operation(summary = "Deleta um Admin",
             description = "Deleta um Admin a partir do seu ID")
     public ResponseEntity<AdminDTO> delete(@PathVariable Long id){

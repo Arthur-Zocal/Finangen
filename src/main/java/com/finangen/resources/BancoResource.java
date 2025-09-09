@@ -47,15 +47,15 @@ public class BancoResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping
+    @PutMapping(value="/idBanco/{idBanco}")
     @Operation(summary = "Altera um Banco",
             description = "Altera um Banco existente")
-    public ResponseEntity<BancoDTO> udpate(@PathVariable Long idBanco, @Valid @RequestBody BancoDTO objDto){
+    public ResponseEntity<BancoDTO> update(@PathVariable Long idBanco, @Valid @RequestBody BancoDTO objDto){
         Banco Obj = bancoService.update(idBanco, objDto);
         return ResponseEntity.ok().body(new BancoDTO(Obj));
     }
 
-    @DeleteMapping
+    @DeleteMapping(value="/idBanco/{idBanco}")
     @Operation(summary = "Deleta um Banco",
             description = "Deleta um Banco a partir do seu ID")
     public ResponseEntity<BancoDTO> delete(@PathVariable Long idBanco){

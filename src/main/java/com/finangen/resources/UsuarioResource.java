@@ -1,6 +1,8 @@
 package com.finangen.resources;
 
+import com.finangen.domains.Lancamento;
 import com.finangen.domains.Usuario;
+import com.finangen.domains.dtos.LancamentoDTO;
 import com.finangen.domains.dtos.UsuarioDTO;
 import com.finangen.services.UsuarioService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -29,6 +31,15 @@ public class UsuarioResource {
         return ResponseEntity.ok().body(usuarioService.findAll());
     }
 
+    @GetMapping(value="/id/{id}")
+    @Operation(summary = "Buscar um Banco pelo ID",
+            description = "Realiza busca de um Banco pelo IDl")
+    public ResponseEntity<UsuarioDTO> findByIdLancamento(@PathVariable Long id){
+        Usuario obj = this.usuarioService.findById(id);
+        return ResponseEntity.ok().body(new UsuarioDTO(obj));
+    }
+
+
     @GetMapping(value="/cpf/{cpf}")
     @Operation(summary = "Buscar um Usuario pelo CPF",
             description = "Realiza busca de um Usuario pelo CPF")
@@ -55,15 +66,15 @@ public class UsuarioResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping
+    @PutMapping(value="/id/{id}")
     @Operation(summary = "Altera um usuario",
             description = "Altera um usuario existente")
-    public ResponseEntity<UsuarioDTO> udpate(@PathVariable Long id, @Valid @RequestBody UsuarioDTO objDto){
+    public ResponseEntity<UsuarioDTO> update(@PathVariable Long id, @Valid @RequestBody UsuarioDTO objDto){
         Usuario Obj = usuarioService.update(id, objDto);
         return ResponseEntity.ok().body(new UsuarioDTO(Obj));
     }
 
-    @DeleteMapping
+    @DeleteMapping(value="/id/{id}")
     @Operation(summary = "Deleta um usuario",
             description = "Deleta um usuario a partir do seu ID")
     public ResponseEntity<UsuarioDTO> delete(@PathVariable Long id){

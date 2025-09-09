@@ -1,7 +1,9 @@
 package com.finangen.resources;
 
+import com.finangen.domains.Banco;
 import com.finangen.domains.Lancamento;
 import com.finangen.domains.Lancamento;
+import com.finangen.domains.dtos.BancoDTO;
 import com.finangen.domains.dtos.LancamentoDTO;
 import com.finangen.services.LancamentoService;
 import com.finangen.services.LancamentoService;
@@ -33,10 +35,18 @@ public class LancamentoResource {
     }
 
     @GetMapping(value="/idLancamento/{idLancamento}")
+    @Operation(summary = "Buscar um Banco pelo ID",
+            description = "Realiza busca de um Banco pelo ID")
+    public ResponseEntity<LancamentoDTO> findByIdLancamento(@PathVariable Long idLancamento){
+        Lancamento obj = this.lancamentoService.findByIdLancamento(idLancamento);
+        return ResponseEntity.ok().body(new LancamentoDTO(obj));
+    }
+
+    @GetMapping(value="/idLancamento/{idLancamento}")
     @Operation(summary = "Buscar um Lancamento pelo ID",
             description = "Realiza busca de um Lancamento pelo ID")
     public ResponseEntity<LancamentoDTO> findByCpf(@PathVariable Long idLancamento){
-        Lancamento obj = this.lancamentoService.findById(idLancamento);
+        Lancamento obj = this.lancamentoService.findByIdLancamento(idLancamento);
         return ResponseEntity.ok().body(new LancamentoDTO(obj));
     }
 
@@ -50,15 +60,15 @@ public class LancamentoResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping
+    @PutMapping(value="/idLancamento/{idLancamento}")
     @Operation(summary = "Altera um Lancamento",
             description = "Altera um Lancamento existente")
-    public ResponseEntity<LancamentoDTO> udpate(@PathVariable Long id, @Valid @RequestBody LancamentoDTO objDto){
+    public ResponseEntity<LancamentoDTO> update(@PathVariable Long id, @Valid @RequestBody LancamentoDTO objDto){
         Lancamento Obj = lancamentoService.update(id, objDto);
         return ResponseEntity.ok().body(new LancamentoDTO(Obj));
     }
 
-    @DeleteMapping
+    @DeleteMapping(value="/idLancamento/{idLancamento}")
     @Operation(summary = "Deleta um Lancamento",
             description = "Deleta um Lancamento a partir do seu ID")
     public ResponseEntity<LancamentoDTO> delete(@PathVariable Long id){
