@@ -31,10 +31,10 @@ public class UsuarioResource {
         return ResponseEntity.ok().body(usuarioService.findAll());
     }
 
-    @GetMapping(value="/id/{id}")
+    @GetMapping(value="/{id}")
     @Operation(summary = "Buscar um Banco pelo ID",
             description = "Realiza busca de um Banco pelo IDl")
-    public ResponseEntity<UsuarioDTO> findByIdLancamento(@PathVariable Long id){
+    public ResponseEntity<UsuarioDTO> findById(@PathVariable Long id){
         Usuario obj = this.usuarioService.findById(id);
         return ResponseEntity.ok().body(new UsuarioDTO(obj));
     }
@@ -66,7 +66,7 @@ public class UsuarioResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping(value="/id/{id}")
+    @PutMapping(value="/{id}")
     @Operation(summary = "Altera um usuario",
             description = "Altera um usuario existente")
     public ResponseEntity<UsuarioDTO> update(@PathVariable Long id, @Valid @RequestBody UsuarioDTO objDto){
@@ -74,7 +74,7 @@ public class UsuarioResource {
         return ResponseEntity.ok().body(new UsuarioDTO(Obj));
     }
 
-    @DeleteMapping(value="/id/{id}")
+    @DeleteMapping(value="/{id}")
     @Operation(summary = "Deleta um usuario",
             description = "Deleta um usuario a partir do seu ID")
     public ResponseEntity<UsuarioDTO> delete(@PathVariable Long id){

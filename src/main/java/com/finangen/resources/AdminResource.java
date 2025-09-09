@@ -33,7 +33,7 @@ public class AdminResource {
         return ResponseEntity.ok().body(adminService.findAll());
     }
 
-    @GetMapping(value="{id}")
+    @GetMapping(value="/{id}")
     @Operation(summary = "Buscar uma Categoria pelo ID",
             description = "Realiza busca de uma Categoria pelo ID")
     public ResponseEntity<AdminDTO> findById(@PathVariable Long id){
@@ -67,7 +67,7 @@ public class AdminResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping(value="/id/{id}")
+    @PutMapping(value="/{id}")
     @Operation(summary = "Altera um Admin",
             description = "Altera um Admin existente")
     public ResponseEntity<AdminDTO> update(@PathVariable Long id, @Valid @RequestBody AdminDTO objDto){
@@ -75,7 +75,7 @@ public class AdminResource {
         return ResponseEntity.ok().body(new AdminDTO(Obj));
     }
 
-    @DeleteMapping(value="/id/{id}")
+    @DeleteMapping(value="/{id}")
     @Operation(summary = "Deleta um Admin",
             description = "Deleta um Admin a partir do seu ID")
     public ResponseEntity<AdminDTO> delete(@PathVariable Long id){

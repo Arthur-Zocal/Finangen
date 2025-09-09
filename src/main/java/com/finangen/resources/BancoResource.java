@@ -29,9 +29,9 @@ public class BancoResource {
         return ResponseEntity.ok().body(bancoService.findAll());
     }
 
-    @GetMapping(value="/idBanco/{idBanco}")
+    @GetMapping(value="/{idBanco}")
     @Operation(summary = "Buscar um Banco pelo ID",
-            description = "Realiza busca de um Banco pelo IDl")
+            description = "Realiza busca de um Banco pelo ID")
     public ResponseEntity<BancoDTO> findByIdBanco(@PathVariable Long idBanco){
         Banco obj = this.bancoService.findByIdBanco(idBanco);
         return ResponseEntity.ok().body(new BancoDTO(obj));
@@ -47,7 +47,7 @@ public class BancoResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping(value="/idBanco/{idBanco}")
+    @PutMapping(value="/{idBanco}")
     @Operation(summary = "Altera um Banco",
             description = "Altera um Banco existente")
     public ResponseEntity<BancoDTO> update(@PathVariable Long idBanco, @Valid @RequestBody BancoDTO objDto){
@@ -55,7 +55,7 @@ public class BancoResource {
         return ResponseEntity.ok().body(new BancoDTO(Obj));
     }
 
-    @DeleteMapping(value="/idBanco/{idBanco}")
+    @DeleteMapping(value="/{idBanco}")
     @Operation(summary = "Deleta um Banco",
             description = "Deleta um Banco a partir do seu ID")
     public ResponseEntity<BancoDTO> delete(@PathVariable Long idBanco){

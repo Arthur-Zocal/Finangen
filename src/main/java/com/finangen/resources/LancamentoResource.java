@@ -34,18 +34,10 @@ public class LancamentoResource {
         return ResponseEntity.ok().body(lancamentoService.findAll());
     }
 
-    @GetMapping(value="/idLancamento/{idLancamento}")
+    @GetMapping(value = "/{idLancamento}")
     @Operation(summary = "Buscar um Banco pelo ID",
             description = "Realiza busca de um Banco pelo ID")
     public ResponseEntity<LancamentoDTO> findByIdLancamento(@PathVariable Long idLancamento){
-        Lancamento obj = this.lancamentoService.findByIdLancamento(idLancamento);
-        return ResponseEntity.ok().body(new LancamentoDTO(obj));
-    }
-
-    @GetMapping(value="/idLancamento/{idLancamento}")
-    @Operation(summary = "Buscar um Lancamento pelo ID",
-            description = "Realiza busca de um Lancamento pelo ID")
-    public ResponseEntity<LancamentoDTO> findByCpf(@PathVariable Long idLancamento){
         Lancamento obj = this.lancamentoService.findByIdLancamento(idLancamento);
         return ResponseEntity.ok().body(new LancamentoDTO(obj));
     }
@@ -60,7 +52,7 @@ public class LancamentoResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping(value="/idLancamento/{idLancamento}")
+    @PutMapping(value="/{idLancamento}")
     @Operation(summary = "Altera um Lancamento",
             description = "Altera um Lancamento existente")
     public ResponseEntity<LancamentoDTO> update(@PathVariable Long id, @Valid @RequestBody LancamentoDTO objDto){
@@ -68,7 +60,7 @@ public class LancamentoResource {
         return ResponseEntity.ok().body(new LancamentoDTO(Obj));
     }
 
-    @DeleteMapping(value="/idLancamento/{idLancamento}")
+    @DeleteMapping(value="/{idLancamento}")
     @Operation(summary = "Deleta um Lancamento",
             description = "Deleta um Lancamento a partir do seu ID")
     public ResponseEntity<LancamentoDTO> delete(@PathVariable Long id){

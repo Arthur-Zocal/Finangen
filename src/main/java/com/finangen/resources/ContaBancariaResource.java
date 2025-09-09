@@ -29,17 +29,17 @@ public class ContaBancariaResource {
         return ResponseEntity.ok().body(contaBancariaService.findAll());
     }
 
-    @GetMapping(value="/idConta/{idConta}")
+    @GetMapping(value="/{idConta}")
     @Operation(summary = "Buscar uma Conta Bancaria pelo ID",
-            description = "Realiza busca de um Conta Bancaria pelo ID")
+            description = "Realiza busca de uma Conta Bancaria pelo ID")
     public ResponseEntity<ContaBancariaDTO> findByIdConta(@PathVariable Long idConta){
         ContaBancaria obj = this.contaBancariaService.findByIdConta(idConta);
         return ResponseEntity.ok().body(new ContaBancariaDTO(obj));
     }
 
     @PostMapping
-    @Operation(summary = "Cria um novo Conta Bancaria",
-            description = "Cria um novo Conta Bancaria com base nos dados fornecidos")
+    @Operation(summary = "Cria uma novo Conta Bancaria",
+            description = "Cria uma novo Conta Bancaria com base nos dados fornecidos")
     public ResponseEntity<ContaBancariaDTO> create(@Valid @RequestBody ContaBancariaDTO dto){
         ContaBancaria contaBancaria = contaBancariaService.create(dto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{idConta}")
@@ -47,7 +47,7 @@ public class ContaBancariaResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping(value="/idConta/{idConta}")
+    @PutMapping(value="/{idConta}")
     @Operation(summary = "Altera um Conta Bancaria",
             description = "Altera um Conta Bancaria existente")
     public ResponseEntity<ContaBancariaDTO> update(@PathVariable Long id, @Valid @RequestBody ContaBancariaDTO objDto){
@@ -55,9 +55,9 @@ public class ContaBancariaResource {
         return ResponseEntity.ok().body(new ContaBancariaDTO(Obj));
     }
 
-    @DeleteMapping(value="/idConta/{idConta}")
-    @Operation(summary = "Deleta um Conta Bancaria",
-            description = "Deleta um Conta Bancaria a partir do seu ID")
+    @DeleteMapping(value="/{idConta}")
+    @Operation(summary = "Deleta uma Conta Bancaria",
+            description = "Deleta uma Conta Bancaria a partir do seu ID")
     public ResponseEntity<ContaBancariaDTO> delete(@PathVariable Long id){
         contaBancariaService.delete(id);
         return ResponseEntity.noContent().build();

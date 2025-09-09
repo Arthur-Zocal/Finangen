@@ -29,7 +29,7 @@ public class CategoriaResource {
         return ResponseEntity.ok().body(categoriaService.findAll());
     }
 
-    @GetMapping(value="/idCategoria/{idCategoria}")
+    @GetMapping(value="/{idCategoria}")
     @Operation(summary = "Buscar uma Categoria pelo ID",
             description = "Realiza busca de uma Categoria pelo ID")
     public ResponseEntity<CategoriaDTO> findByIdCategoria(@PathVariable Long idCategoria){
