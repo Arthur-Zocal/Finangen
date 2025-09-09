@@ -47,15 +47,15 @@ public class CategoriaResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @PutMapping
+    @PutMapping(value = "/{idCategoria}")
     @Operation(summary = "Altera uma Categoria",
             description = "Altera uma Categoria existente")
-    public ResponseEntity<CategoriaDTO> udpate(@PathVariable Long idCategoria, @Valid @RequestBody CategoriaDTO objDto){
+    public ResponseEntity<CategoriaDTO> update(@PathVariable Long idCategoria, @Valid @RequestBody CategoriaDTO objDto){
         Categoria Obj = categoriaService.update(idCategoria, objDto);
         return ResponseEntity.ok().body(new CategoriaDTO(Obj));
     }
 
-    @DeleteMapping
+    @DeleteMapping(value = "/{idCategoria}")
     @Operation(summary = "Deleta uma Categoria",
             description = "Deleta uma Categoria a partir do seu ID")
     public ResponseEntity<CategoriaDTO> delete(@PathVariable Long idCategoria){
