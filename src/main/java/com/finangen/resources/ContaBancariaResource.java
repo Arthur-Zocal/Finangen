@@ -50,16 +50,16 @@ public class ContaBancariaResource {
     @PutMapping(value="/{idConta}")
     @Operation(summary = "Altera um Conta Bancaria",
             description = "Altera um Conta Bancaria existente")
-    public ResponseEntity<ContaBancariaDTO> update(@PathVariable Long id, @Valid @RequestBody ContaBancariaDTO objDto){
-        ContaBancaria Obj = contaBancariaService.update(id, objDto);
+    public ResponseEntity<ContaBancariaDTO> update(@PathVariable Long idConta, @Valid @RequestBody ContaBancariaDTO objDto){
+        ContaBancaria Obj = contaBancariaService.update(idConta, objDto);
         return ResponseEntity.ok().body(new ContaBancariaDTO(Obj));
     }
 
     @DeleteMapping(value="/{idConta}")
     @Operation(summary = "Deleta uma Conta Bancaria",
             description = "Deleta uma Conta Bancaria a partir do seu ID")
-    public ResponseEntity<ContaBancariaDTO> delete(@PathVariable Long id){
-        contaBancariaService.delete(id);
+    public ResponseEntity<ContaBancariaDTO> delete(@PathVariable Long idConta){
+        contaBancariaService.delete(idConta);
         return ResponseEntity.noContent().build();
     }
 
